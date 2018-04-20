@@ -12,6 +12,8 @@ namespace Login
 {
     public partial class Form1 : Form
     {
+
+    //testiranje ignore postavki
         public Form1()
         {
             InitializeComponent();
