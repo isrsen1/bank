@@ -14,6 +14,7 @@ namespace Login
     {
 
     //testiranje ignore postavki
+    //test broj2
         public Form1()
         {
             InitializeComponent();
