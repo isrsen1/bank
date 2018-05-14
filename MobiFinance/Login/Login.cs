@@ -22,15 +22,27 @@ namespace Login
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string m_strFilePath = "http://api.hnb.hr/tecajn?valuta=EUR&format=xml";
+           
+        }
 
-            XmlDocument myXmlDocument = new XmlDocument();
-            myXmlDocument.Load(m_strFilePath);
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
-            foreach (XmlNode RootNode in myXmlDocument.ChildNodes)
-            {
-                MessageBox.Show(RootNode.InnerText);
-            }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
