@@ -11,11 +11,11 @@ using System.Xml;
 
 namespace Login
 {
-    public partial class Login : Form
+    public partial class Template : Form
     {
 
     //testiranje ignore postavki
-        public Login()
+        public Template()
         {
             InitializeComponent();
         }
