@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Login.Forme
 {
-    public partial class FrmDodajKorisnikaPrivatni : Template
+    public partial class FrmOtvaranjeKredita : Form
     {
-        public FrmDodajKorisnikaPrivatni()
+        public FrmOtvaranjeKredita()
         {
             InitializeComponent();
-        }
-
-        private void FrmDodajKorisnikaPrivatni_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

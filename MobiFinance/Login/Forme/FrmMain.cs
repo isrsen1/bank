@@ -29,7 +29,7 @@ namespace Login.Forme
 
         private void btnPregledKorisnika_Click(object sender, EventArgs e)
         {
-            FrmPregledKorisnika pregledKorisnika = new FrmPregledKorisnika();
+            FrmPregledKlijenata pregledKorisnika = new FrmPregledKlijenata();
             pregledKorisnika.ShowDialog();
             this.Close();
         }

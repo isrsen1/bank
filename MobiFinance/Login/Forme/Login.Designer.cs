@@ -51,7 +51,7 @@
             // 
             this.lblLozinka.AutoSize = true;
             this.lblLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLozinka.Location = new System.Drawing.Point(142, 241);
+            this.lblLozinka.Location = new System.Drawing.Point(142, 224);
             this.lblLozinka.Name = "lblLozinka";
             this.lblLozinka.Size = new System.Drawing.Size(95, 29);
             this.lblLozinka.TabIndex = 3;
@@ -59,16 +59,18 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(401, 185);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(401, 178);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 22);
+            this.textBox1.Size = new System.Drawing.Size(293, 28);
             this.textBox1.TabIndex = 4;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(401, 241);
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(401, 224);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 22);
+            this.textBox2.Size = new System.Drawing.Size(293, 28);
             this.textBox2.TabIndex = 5;
             // 
             // btnPrijaviSe
@@ -76,7 +78,7 @@
             this.btnPrijaviSe.ForeColor = System.Drawing.Color.Black;
             this.btnPrijaviSe.Location = new System.Drawing.Point(401, 314);
             this.btnPrijaviSe.Name = "btnPrijaviSe";
-            this.btnPrijaviSe.Size = new System.Drawing.Size(293, 23);
+            this.btnPrijaviSe.Size = new System.Drawing.Size(293, 35);
             this.btnPrijaviSe.TabIndex = 6;
             this.btnPrijaviSe.Text = "Prijavi se";
             this.btnPrijaviSe.UseVisualStyleBackColor = true;
@@ -85,9 +87,9 @@
             // btnOdustani
             // 
             this.btnOdustani.ForeColor = System.Drawing.Color.Black;
-            this.btnOdustani.Location = new System.Drawing.Point(401, 343);
+            this.btnOdustani.Location = new System.Drawing.Point(401, 355);
             this.btnOdustani.Name = "btnOdustani";
-            this.btnOdustani.Size = new System.Drawing.Size(293, 23);
+            this.btnOdustani.Size = new System.Drawing.Size(293, 35);
             this.btnOdustani.TabIndex = 7;
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;

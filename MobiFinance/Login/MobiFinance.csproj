@@ -63,6 +63,30 @@
     <Compile Include="Forme\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FrmOtvaranjeKredita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeKredita.Designer.cs">
+      <DependentUpon>FrmOtvaranjeKredita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeNeoroceneStednje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeNeoroceneStednje.Designer.cs">
+      <DependentUpon>FrmOtvaranjeNeoroceneStednje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeRacuna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeRacuna.Designer.cs">
+      <DependentUpon>FrmOtvaranjeRacuna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeOroceneStednje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmOtvaranjeOroceneStednje.Designer.cs">
+      <DependentUpon>FrmOtvaranjeOroceneStednje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FrmOtvaranjeUsluga.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +133,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmOtvaranjeNeoroceneStednje.resx">
+      <DependentUpon>FrmOtvaranjeNeoroceneStednje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmOtvaranjeOroceneStednje.resx">
+      <DependentUpon>FrmOtvaranjeOroceneStednje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmOtvaranjeRacuna.resx">
+      <DependentUpon>FrmOtvaranjeRacuna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmOtvaranjeUsluga.resx">
       <DependentUpon>FrmOtvaranjeUsluga.cs</DependentUpon>

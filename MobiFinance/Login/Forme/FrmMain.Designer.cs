@@ -30,7 +30,7 @@
         {
             this.btnZaposlenici = new System.Windows.Forms.Button();
             this.btnOtvaranjeUsluga = new System.Windows.Forms.Button();
-            this.btnPregledKorisnika = new System.Windows.Forms.Button();
+            this.btnPregledKlijenata = new System.Windows.Forms.Button();
             this.btnMjenjacnica = new System.Windows.Forms.Button();
             this.btnUplatnica = new System.Windows.Forms.Button();
             this.btnOtplatnaTablica = new System.Windows.Forms.Button();
@@ -70,21 +70,21 @@
             this.btnOtvaranjeUsluga.UseVisualStyleBackColor = true;
             this.btnOtvaranjeUsluga.Click += new System.EventHandler(this.btnOtvaranjeUsluga_Click);
             // 
-            // btnPregledKorisnika
+            // btnPregledKlijenata
             // 
-            this.btnPregledKorisnika.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPregledKorisnika.ForeColor = System.Drawing.Color.Black;
-            this.btnPregledKorisnika.Image = global::Login.Properties.Resources.search;
-            this.btnPregledKorisnika.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPregledKorisnika.Location = new System.Drawing.Point(103, 217);
-            this.btnPregledKorisnika.Name = "btnPregledKorisnika";
-            this.btnPregledKorisnika.Size = new System.Drawing.Size(222, 64);
-            this.btnPregledKorisnika.TabIndex = 4;
-            this.btnPregledKorisnika.Text = "Pregled korisnika";
-            this.btnPregledKorisnika.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPregledKorisnika.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPregledKorisnika.UseVisualStyleBackColor = true;
-            this.btnPregledKorisnika.Click += new System.EventHandler(this.btnPregledKorisnika_Click);
+            this.btnPregledKlijenata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPregledKlijenata.ForeColor = System.Drawing.Color.Black;
+            this.btnPregledKlijenata.Image = global::Login.Properties.Resources.search;
+            this.btnPregledKlijenata.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPregledKlijenata.Location = new System.Drawing.Point(103, 217);
+            this.btnPregledKlijenata.Name = "btnPregledKlijenata";
+            this.btnPregledKlijenata.Size = new System.Drawing.Size(222, 64);
+            this.btnPregledKlijenata.TabIndex = 4;
+            this.btnPregledKlijenata.Text = "Pregled klijenata";
+            this.btnPregledKlijenata.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPregledKlijenata.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPregledKlijenata.UseVisualStyleBackColor = true;
+            this.btnPregledKlijenata.Click += new System.EventHandler(this.btnPregledKorisnika_Click);
             // 
             // btnMjenjacnica
             // 
@@ -180,7 +180,7 @@
             this.Controls.Add(this.btnOtplatnaTablica);
             this.Controls.Add(this.btnUplatnica);
             this.Controls.Add(this.btnMjenjacnica);
-            this.Controls.Add(this.btnPregledKorisnika);
+            this.Controls.Add(this.btnPregledKlijenata);
             this.Controls.Add(this.btnOtvaranjeUsluga);
             this.Controls.Add(this.btnZaposlenici);
             this.Name = "FrmMain";
@@ -188,7 +188,7 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Controls.SetChildIndex(this.btnZaposlenici, 0);
             this.Controls.SetChildIndex(this.btnOtvaranjeUsluga, 0);
-            this.Controls.SetChildIndex(this.btnPregledKorisnika, 0);
+            this.Controls.SetChildIndex(this.btnPregledKlijenata, 0);
             this.Controls.SetChildIndex(this.btnMjenjacnica, 0);
             this.Controls.SetChildIndex(this.btnUplatnica, 0);
             this.Controls.SetChildIndex(this.btnOtplatnaTablica, 0);
@@ -204,7 +204,7 @@
 
         private System.Windows.Forms.Button btnZaposlenici;
         private System.Windows.Forms.Button btnOtvaranjeUsluga;
-        private System.Windows.Forms.Button btnPregledKorisnika;
+        private System.Windows.Forms.Button btnPregledKlijenata;
         private System.Windows.Forms.Button btnMjenjacnica;
         private System.Windows.Forms.Button btnUplatnica;
         private System.Windows.Forms.Button btnOtplatnaTablica;

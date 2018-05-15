@@ -1,6 +1,6 @@
 ﻿namespace Login.Forme
 {
-    partial class FrmDodajKorisnikaPoslovni
+    partial class FrmOtvaranjeKredita
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // FrmDodajKorisnikaPoslovni
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 474);
-            this.Name = "FrmDodajKorisnikaPoslovni";
-            this.Text = "FrmDodajKorisnikaPoslovi";
-            this.Load += new System.EventHandler(this.FrmDodajKorisnikaPoslovni_Load);
-            this.ResumeLayout(false);
-
+            this.Text = "FrmOtvaranjeKredita";
         }
 
         #endregion

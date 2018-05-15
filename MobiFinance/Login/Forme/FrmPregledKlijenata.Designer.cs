@@ -1,6 +1,6 @@
 ﻿namespace Login.Forme
 {
-    partial class FrmPregledKorisnika
+    partial class FrmPregledKlijenata
     {
         /// <summary>
         /// Required designer variable.

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Login.Forme
 {
-    public partial class FrmDodajKorisnikaPoslovni : Template
+    public partial class FrmOtvaranjeOroceneStednje : Template
     {
-        public FrmDodajKorisnikaPoslovni()
+        public FrmOtvaranjeOroceneStednje()
         {
             InitializeComponent();
         }
 
-        private void FrmDodajKorisnikaPoslovni_Load(object sender, EventArgs e)
+        private void FrmOtvaranjeOroceneStednje_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
