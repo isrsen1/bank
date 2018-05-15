@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forme\FrmDodajKorisnikaPoslovni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmDodajKorisnikaPoslovni.Designer.cs">
+      <DependentUpon>FrmDodajKorisnikaPoslovni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmDodajKorisnikaPrivatni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmDodajKorisnikaPrivatni.Designer.cs">
+      <DependentUpon>FrmDodajKorisnikaPrivatni.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +101,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\FrmDodajKorisnikaPoslovni.resx">
+      <DependentUpon>FrmDodajKorisnikaPoslovni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmDodajKorisnikaPrivatni.resx">
+      <DependentUpon>FrmDodajKorisnikaPrivatni.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +195,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\back1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addUser1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

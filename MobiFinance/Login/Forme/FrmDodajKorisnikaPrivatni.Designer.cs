@@ -1,6 +1,6 @@
 ﻿namespace Login.Forme
 {
-    partial class FrmUsluge
+    partial class FrmDodajKorisnikaPrivatni
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FrmUsluge
+            // FrmDodajKorisnikaPrivatni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 474);
-            this.Name = "FrmUsluge";
-            this.Text = "FrmUsluge";
-            this.Load += new System.EventHandler(this.FrmUsluge_Load);
+            this.Name = "FrmDodajKorisnikaPrivatni";
+            this.Text = "FrmDodajKorisnikaPrivatni";
+            this.Load += new System.EventHandler(this.FrmDodajKorisnikaPrivatni_Load);
             this.ResumeLayout(false);
 
         }

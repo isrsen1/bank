@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 430);
+            this.ClientSize = new System.Drawing.Size(1079, 474);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnPrijaviSe);
             this.Controls.Add(this.textBox2);

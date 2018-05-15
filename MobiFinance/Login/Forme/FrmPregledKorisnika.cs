@@ -21,5 +21,19 @@ namespace Login.Forme
         {
 
         }
+
+        private void btnDodajPrivatnog_Click(object sender, EventArgs e)
+        {
+            FrmDodajKorisnikaPrivatni privatniKorisnik = new FrmDodajKorisnikaPrivatni();
+            privatniKorisnik.ShowDialog();
+            this.Close();
+        }
+
+        private void btnDodajPoslovnog_Click(object sender, EventArgs e)
+        {
+            FrmDodajKorisnikaPoslovni poslovniKorisnik = new FrmDodajKorisnikaPoslovni();
+            poslovniKorisnik.ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -36,8 +36,7 @@
             this.btnOtplatnaTablica = new System.Windows.Forms.Button();
             this.btnUsluge = new System.Windows.Forms.Button();
             this.lblGlavniIzbornik = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnOdjaviSe = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnZaposlenici
@@ -46,7 +45,7 @@
             this.btnZaposlenici.ForeColor = System.Drawing.Color.Black;
             this.btnZaposlenici.Image = global::Login.Properties.Resources.emp1;
             this.btnZaposlenici.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnZaposlenici.Location = new System.Drawing.Point(585, 287);
+            this.btnZaposlenici.Location = new System.Drawing.Point(822, 217);
             this.btnZaposlenici.Name = "btnZaposlenici";
             this.btnZaposlenici.Size = new System.Drawing.Size(222, 64);
             this.btnZaposlenici.TabIndex = 2;
@@ -61,7 +60,7 @@
             this.btnOtvaranjeUsluga.ForeColor = System.Drawing.Color.Black;
             this.btnOtvaranjeUsluga.Image = global::Login.Properties.Resources.ugovaranje;
             this.btnOtvaranjeUsluga.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOtvaranjeUsluga.Location = new System.Drawing.Point(345, 287);
+            this.btnOtvaranjeUsluga.Location = new System.Drawing.Point(484, 287);
             this.btnOtvaranjeUsluga.Name = "btnOtvaranjeUsluga";
             this.btnOtvaranjeUsluga.Size = new System.Drawing.Size(222, 64);
             this.btnOtvaranjeUsluga.TabIndex = 3;
@@ -93,7 +92,7 @@
             this.btnMjenjacnica.ForeColor = System.Drawing.Color.Black;
             this.btnMjenjacnica.Image = global::Login.Properties.Resources.exchange;
             this.btnMjenjacnica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMjenjacnica.Location = new System.Drawing.Point(103, 287);
+            this.btnMjenjacnica.Location = new System.Drawing.Point(484, 217);
             this.btnMjenjacnica.Name = "btnMjenjacnica";
             this.btnMjenjacnica.Size = new System.Drawing.Size(222, 64);
             this.btnMjenjacnica.TabIndex = 5;
@@ -108,7 +107,7 @@
             this.btnUplatnica.ForeColor = System.Drawing.Color.Black;
             this.btnUplatnica.Image = global::Login.Properties.Resources.uplatnica;
             this.btnUplatnica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUplatnica.Location = new System.Drawing.Point(345, 217);
+            this.btnUplatnica.Location = new System.Drawing.Point(822, 287);
             this.btnUplatnica.Name = "btnUplatnica";
             this.btnUplatnica.Size = new System.Drawing.Size(222, 64);
             this.btnUplatnica.TabIndex = 6;
@@ -123,7 +122,7 @@
             this.btnOtplatnaTablica.ForeColor = System.Drawing.Color.Black;
             this.btnOtplatnaTablica.Image = global::Login.Properties.Resources.calcul;
             this.btnOtplatnaTablica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOtplatnaTablica.Location = new System.Drawing.Point(103, 360);
+            this.btnOtplatnaTablica.Location = new System.Drawing.Point(103, 287);
             this.btnOtplatnaTablica.Name = "btnOtplatnaTablica";
             this.btnOtplatnaTablica.Size = new System.Drawing.Size(222, 64);
             this.btnOtplatnaTablica.TabIndex = 7;
@@ -139,7 +138,7 @@
             this.btnUsluge.ForeColor = System.Drawing.Color.Black;
             this.btnUsluge.Image = global::Login.Properties.Resources.popis;
             this.btnUsluge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsluge.Location = new System.Drawing.Point(345, 360);
+            this.btnUsluge.Location = new System.Drawing.Point(484, 360);
             this.btnUsluge.Name = "btnUsluge";
             this.btnUsluge.Size = new System.Drawing.Size(222, 64);
             this.btnUsluge.TabIndex = 8;
@@ -153,40 +152,29 @@
             // 
             this.lblGlavniIzbornik.AutoSize = true;
             this.lblGlavniIzbornik.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGlavniIzbornik.Location = new System.Drawing.Point(326, 109);
+            this.lblGlavniIzbornik.Location = new System.Drawing.Point(474, 118);
             this.lblGlavniIzbornik.Name = "lblGlavniIzbornik";
             this.lblGlavniIzbornik.Size = new System.Drawing.Size(232, 38);
             this.lblGlavniIzbornik.TabIndex = 9;
             this.lblGlavniIzbornik.Text = "Glavni izbornik";
             // 
-            // button1
+            // btnOdjaviSe
             // 
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(774, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 27);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Odjavi se";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Image = global::Login.Properties.Resources.back1;
-            this.button2.Location = new System.Drawing.Point(-2, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 83);
-            this.button2.TabIndex = 11;
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOdjaviSe.ForeColor = System.Drawing.Color.Black;
+            this.btnOdjaviSe.Location = new System.Drawing.Point(952, 422);
+            this.btnOdjaviSe.Name = "btnOdjaviSe";
+            this.btnOdjaviSe.Size = new System.Drawing.Size(92, 40);
+            this.btnOdjaviSe.TabIndex = 10;
+            this.btnOdjaviSe.Text = "Odjavi se";
+            this.btnOdjaviSe.UseVisualStyleBackColor = true;
+            this.btnOdjaviSe.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 454);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(1079, 474);
+            this.Controls.Add(this.btnOdjaviSe);
             this.Controls.Add(this.lblGlavniIzbornik);
             this.Controls.Add(this.btnUsluge);
             this.Controls.Add(this.btnOtplatnaTablica);
@@ -206,8 +194,7 @@
             this.Controls.SetChildIndex(this.btnOtplatnaTablica, 0);
             this.Controls.SetChildIndex(this.btnUsluge, 0);
             this.Controls.SetChildIndex(this.lblGlavniIzbornik, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.button2, 0);
+            this.Controls.SetChildIndex(this.btnOdjaviSe, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,7 +210,6 @@
         private System.Windows.Forms.Button btnOtplatnaTablica;
         private System.Windows.Forms.Button btnUsluge;
         private System.Windows.Forms.Label lblGlavniIzbornik;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnOdjaviSe;
     }
 }
