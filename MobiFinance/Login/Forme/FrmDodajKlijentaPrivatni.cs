@@ -26,5 +26,16 @@ namespace Login.Forme
         {
 
         }
+
+        private void btnPrethodna_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPocetna_Click(object sender, EventArgs e)
+        {
+            FrmMain glavnaForma = new FrmMain();
+            glavnaForma.Show();
+        }
     }
 }

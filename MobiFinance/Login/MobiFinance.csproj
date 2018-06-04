@@ -45,23 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forme\FrmDodajKorisnikaPoslovni.cs">
+    <Compile Include="Forme\FrmDodajKlijentaPoslovni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmDodajKorisnikaPoslovni.Designer.cs">
-      <DependentUpon>FrmDodajKorisnikaPoslovni.cs</DependentUpon>
+    <Compile Include="Forme\FrmDodajKlijentaPoslovni.Designer.cs">
+      <DependentUpon>FrmDodajKlijentaPoslovni.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmDodajKorisnikaPrivatni.cs">
+    <Compile Include="Forme\FrmDodajKlijentaPrivatni.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmDodajKorisnikaPrivatni.Designer.cs">
-      <DependentUpon>FrmDodajKorisnikaPrivatni.cs</DependentUpon>
+    <Compile Include="Forme\FrmDodajKlijentaPrivatni.Designer.cs">
+      <DependentUpon>FrmDodajKlijentaPrivatni.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forme\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\FrmMjenjacnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmMjenjacnica.Designer.cs">
+      <DependentUpon>FrmMjenjacnica.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\FrmOtvaranjeKredita.cs">
       <SubType>Form</SubType>
@@ -93,11 +99,11 @@
     <Compile Include="Forme\FrmOtvaranjeUsluga.Designer.cs">
       <DependentUpon>FrmOtvaranjeUsluga.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\FrmPregledKorisnika.cs">
+    <Compile Include="Forme\FrmPregledKlijenata.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\FrmPregledKorisnika.Designer.cs">
-      <DependentUpon>FrmPregledKorisnika.cs</DependentUpon>
+    <Compile Include="Forme\FrmPregledKlijenata.Designer.cs">
+      <DependentUpon>FrmPregledKlijenata.cs</DependentUpon>
     </Compile>
     <Compile Include="Forme\FrmUsluge.cs">
       <SubType>Form</SubType>
@@ -125,14 +131,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forme\FrmDodajKorisnikaPoslovni.resx">
-      <DependentUpon>FrmDodajKorisnikaPoslovni.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\FrmDodajKlijentaPoslovni.resx">
+      <DependentUpon>FrmDodajKlijentaPoslovni.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmDodajKorisnikaPrivatni.resx">
-      <DependentUpon>FrmDodajKorisnikaPrivatni.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\FrmDodajKlijentaPrivatni.resx">
+      <DependentUpon>FrmDodajKlijentaPrivatni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmMjenjacnica.resx">
+      <DependentUpon>FrmMjenjacnica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmOtvaranjeNeoroceneStednje.resx">
       <DependentUpon>FrmOtvaranjeNeoroceneStednje.cs</DependentUpon>
@@ -146,8 +155,8 @@
     <EmbeddedResource Include="Forme\FrmOtvaranjeUsluga.resx">
       <DependentUpon>FrmOtvaranjeUsluga.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\FrmPregledKorisnika.resx">
-      <DependentUpon>FrmPregledKorisnika.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\FrmPregledKlijenata.resx">
+      <DependentUpon>FrmPregledKlijenata.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmUsluge.resx">
       <DependentUpon>FrmUsluge.cs</DependentUpon>

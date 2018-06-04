@@ -35,16 +35,18 @@
             this.btnOdjaviSe = new System.Windows.Forms.Button();
             this.btnDodajPrivatnog = new System.Windows.Forms.Button();
             this.btnDodajPoslovnog = new System.Windows.Forms.Button();
+            this.btnPrethodna = new System.Windows.Forms.Button();
+            this.btnPocetna = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 131);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 195);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(734, 350);
+            this.dataGridView1.Size = new System.Drawing.Size(734, 286);
             this.dataGridView1.TabIndex = 2;
             // 
             // comboBox1
@@ -116,11 +118,35 @@
             this.btnDodajPoslovnog.UseVisualStyleBackColor = true;
             this.btnDodajPoslovnog.Click += new System.EventHandler(this.btnDodajPoslovnog_Click);
             // 
-            // FrmPregledKorisnika
+            // btnPrethodna
+            // 
+            this.btnPrethodna.ForeColor = System.Drawing.Color.Black;
+            this.btnPrethodna.Location = new System.Drawing.Point(2, 112);
+            this.btnPrethodna.Name = "btnPrethodna";
+            this.btnPrethodna.Size = new System.Drawing.Size(88, 30);
+            this.btnPrethodna.TabIndex = 9;
+            this.btnPrethodna.Text = "Prethodna";
+            this.btnPrethodna.UseVisualStyleBackColor = true;
+            this.btnPrethodna.Click += new System.EventHandler(this.btnPrethodna_Click);
+            // 
+            // btnPocetna
+            // 
+            this.btnPocetna.ForeColor = System.Drawing.Color.Black;
+            this.btnPocetna.Location = new System.Drawing.Point(2, 148);
+            this.btnPocetna.Name = "btnPocetna";
+            this.btnPocetna.Size = new System.Drawing.Size(88, 30);
+            this.btnPocetna.TabIndex = 10;
+            this.btnPocetna.Text = "Početna";
+            this.btnPocetna.UseVisualStyleBackColor = true;
+            this.btnPocetna.Click += new System.EventHandler(this.btnPocetna_Click);
+            // 
+            // FrmPregledKlijenata
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 474);
+            this.Controls.Add(this.btnPocetna);
+            this.Controls.Add(this.btnPrethodna);
             this.Controls.Add(this.btnDodajPoslovnog);
             this.Controls.Add(this.btnDodajPrivatnog);
             this.Controls.Add(this.btnOdjaviSe);
@@ -128,7 +154,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FrmPregledKorisnika";
+            this.Name = "FrmPregledKlijenata";
             this.Text = "FrmPregledKorisnika";
             this.Load += new System.EventHandler(this.FrmPregledKorisnika_Load);
             this.Controls.SetChildIndex(this.dataGridView1, 0);
@@ -138,6 +164,8 @@
             this.Controls.SetChildIndex(this.btnOdjaviSe, 0);
             this.Controls.SetChildIndex(this.btnDodajPrivatnog, 0);
             this.Controls.SetChildIndex(this.btnDodajPoslovnog, 0);
+            this.Controls.SetChildIndex(this.btnPrethodna, 0);
+            this.Controls.SetChildIndex(this.btnPocetna, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,5 +181,7 @@
         private System.Windows.Forms.Button btnOdjaviSe;
         private System.Windows.Forms.Button btnDodajPrivatnog;
         private System.Windows.Forms.Button btnDodajPoslovnog;
+        private System.Windows.Forms.Button btnPrethodna;
+        private System.Windows.Forms.Button btnPocetna;
     }
 }

@@ -40,6 +40,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.btnPocetna = new System.Windows.Forms.Button();
+            this.btnPrethodna = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -157,11 +159,35 @@
             this.textBox6.Size = new System.Drawing.Size(223, 28);
             this.textBox6.TabIndex = 13;
             // 
+            // btnPocetna
+            // 
+            this.btnPocetna.ForeColor = System.Drawing.Color.Black;
+            this.btnPocetna.Location = new System.Drawing.Point(2, 166);
+            this.btnPocetna.Name = "btnPocetna";
+            this.btnPocetna.Size = new System.Drawing.Size(88, 30);
+            this.btnPocetna.TabIndex = 15;
+            this.btnPocetna.Text = "Početna";
+            this.btnPocetna.UseVisualStyleBackColor = true;
+            this.btnPocetna.Click += new System.EventHandler(this.btnPocetna_Click);
+            // 
+            // btnPrethodna
+            // 
+            this.btnPrethodna.ForeColor = System.Drawing.Color.Black;
+            this.btnPrethodna.Location = new System.Drawing.Point(2, 130);
+            this.btnPrethodna.Name = "btnPrethodna";
+            this.btnPrethodna.Size = new System.Drawing.Size(88, 30);
+            this.btnPrethodna.TabIndex = 14;
+            this.btnPrethodna.Text = "Prethodna";
+            this.btnPrethodna.UseVisualStyleBackColor = true;
+            this.btnPrethodna.Click += new System.EventHandler(this.btnPrethodna_Click);
+            // 
             // FrmDodajKlijentaPrivatni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 474);
+            this.Controls.Add(this.btnPocetna);
+            this.Controls.Add(this.btnPrethodna);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -189,6 +215,8 @@
             this.Controls.SetChildIndex(this.textBox4, 0);
             this.Controls.SetChildIndex(this.textBox5, 0);
             this.Controls.SetChildIndex(this.textBox6, 0);
+            this.Controls.SetChildIndex(this.btnPrethodna, 0);
+            this.Controls.SetChildIndex(this.btnPocetna, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +236,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button btnPocetna;
+        private System.Windows.Forms.Button btnPrethodna;
     }
 }

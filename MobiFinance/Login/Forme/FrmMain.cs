@@ -30,8 +30,9 @@ namespace Login.Forme
         private void btnPregledKorisnika_Click(object sender, EventArgs e)
         {
             FrmPregledKlijenata pregledKorisnika = new FrmPregledKlijenata();
+            this.Hide();
             pregledKorisnika.ShowDialog();
-            this.Close();
+            this.Show();
         }
 
         private void btnUsluge_Click(object sender, EventArgs e)

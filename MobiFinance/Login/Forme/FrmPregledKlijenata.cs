@@ -35,5 +35,16 @@ namespace Login.Forme
             poslovniKorisnik.ShowDialog();
             this.Close();
         }
+
+        private void btnPocetna_Click(object sender, EventArgs e)
+        {
+            FrmMain glavnaForma = new FrmMain();
+            this.Close();
+        }
+
+        private void btnPrethodna_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
