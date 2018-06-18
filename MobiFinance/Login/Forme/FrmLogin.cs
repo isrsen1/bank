@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Login.Forme
 {
-    public partial class Login : Template
+    public partial class FrmLogin : Template
     {
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
         }

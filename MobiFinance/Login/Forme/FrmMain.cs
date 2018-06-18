@@ -53,7 +53,7 @@ namespace Login.Forme
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
-                Login login = new Login();
+                FrmLogin login = new FrmLogin();
                 login.ShowDialog();
                 this.Close();
             }

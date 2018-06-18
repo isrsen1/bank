@@ -117,11 +117,11 @@
     <Compile Include="Forme\FrmZaposlenici.Designer.cs">
       <DependentUpon>FrmZaposlenici.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forme\Login.cs">
+    <Compile Include="Forme\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forme\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Forme\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Template.cs">
       <SubType>Form</SubType>
@@ -164,8 +164,8 @@
     <EmbeddedResource Include="Forme\FrmZaposlenici.resx">
       <DependentUpon>FrmZaposlenici.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forme\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forme\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Template.resx">
       <DependentUpon>Template.cs</DependentUpon>
