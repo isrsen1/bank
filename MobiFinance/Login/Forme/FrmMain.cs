@@ -24,7 +24,10 @@ namespace Login.Forme
 
         private void btnOtplatnaTablica_Click(object sender, EventArgs e)
         {
-
+            FrmOtplatnaTablica otplatna = new FrmOtplatnaTablica();
+            this.Hide();
+            otplatna.ShowDialog();
+            this.Show();
         }
 
         private void btnPregledKorisnika_Click(object sender, EventArgs e)
