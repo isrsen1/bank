@@ -167,6 +167,9 @@
     <EmbeddedResource Include="Forme\FrmMjenjacnica.resx">
       <DependentUpon>FrmMjenjacnica.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmOtplatnaTablica.resx">
+      <DependentUpon>FrmOtplatnaTablica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmOtvaranjeKredita.resx">
       <DependentUpon>FrmOtvaranjeKredita.cs</DependentUpon>
     </EmbeddedResource>
