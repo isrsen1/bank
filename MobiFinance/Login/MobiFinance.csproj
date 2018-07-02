@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Forme\FrmDodajKlijentaPoslovni.cs">
       <SubType>Form</SubType>
     </Compile>
