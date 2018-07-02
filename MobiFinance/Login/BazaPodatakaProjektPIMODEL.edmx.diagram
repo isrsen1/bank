@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b4a0512c4e564379bd899498436e53de" Name="Diagram1">
+        <EntityTypeShape EntityType="DBModel.Bilanca" Width="1.5" PointX="3" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Imovina" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Izvor_imovine" Width="1.5" PointX="5.25" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Klijent" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Kredit_" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Otplatna_tablica" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Račun" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Stednja" Width="1.5" PointX="8" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.sysdiagram" Width="1.5" PointX="3.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Tip_zaposlenika" Width="1.5" PointX="1.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.VrstaRačuna" Width="1.5" PointX="0.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.VrstaStednje" Width="1.5" PointX="5.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBModel.Zaposlenik" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="DBModel.FK_bilanca_klijent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_imovina_bilanca" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_izvor_imovine_bilanca" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_kredit__klijent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_račun_klijent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_štednja_klijent" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_kredit__zaposlenik" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_otplatna_tablica_kredit_" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_račun_vrsta_računa" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_štednja_vrsta_stednje" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_štednja_zaposlenik" ManuallyRouted="false" />
+        <AssociationConnector Association="DBModel.FK_zaposlenik_tip_zaposlenika" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
