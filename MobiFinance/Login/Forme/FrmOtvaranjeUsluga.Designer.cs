@@ -75,7 +75,7 @@
             // 
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.Black;
-            this.btnFilter.Image = global::Login.Properties.Resources.filter1;
+            this.btnFilter.Image = global::MobiFinance.Properties.Resources.filter1;
             this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilter.Location = new System.Drawing.Point(12, 153);
             this.btnFilter.Name = "btnFilter";
@@ -89,7 +89,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::Login.Properties.Resources.filter1;
+            this.button1.Image = global::MobiFinance.Properties.Resources.filter1;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(527, 153);
             this.button1.Name = "button1";
