@@ -48,7 +48,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Login.Properties.Resources.exit;
+            this.pictureBox2.Image = global::MobiFinance.Properties.Resources.exit;
             this.pictureBox2.Location = new System.Drawing.Point(875, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(55, 50);
@@ -63,14 +63,14 @@
             this.lblNaziv.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNaziv.Location = new System.Drawing.Point(323, 22);
             this.lblNaziv.Name = "lblNaziv";
-            this.lblNaziv.Size = new System.Drawing.Size(299, 55);
+            this.lblNaziv.Size = new System.Drawing.Size(238, 44);
             this.lblNaziv.TabIndex = 0;
             this.lblNaziv.Text = "MobiFinance";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.pictureBox1.Image = global::Login.Properties.Resources.logo1;
+            this.pictureBox1.Image = global::MobiFinance.Properties.Resources.logo1;
             this.pictureBox1.Location = new System.Drawing.Point(2, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(116, 100);
@@ -90,7 +90,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Template";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

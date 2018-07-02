@@ -43,7 +43,7 @@
             // 
             this.btnZaposlenici.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnZaposlenici.ForeColor = System.Drawing.Color.Black;
-            this.btnZaposlenici.Image = global::Login.Properties.Resources.emp1;
+            this.btnZaposlenici.Image = global::MobiFinance.Properties.Resources.emp1;
             this.btnZaposlenici.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnZaposlenici.Location = new System.Drawing.Point(822, 217);
             this.btnZaposlenici.Name = "btnZaposlenici";
@@ -58,7 +58,7 @@
             // 
             this.btnOtvaranjeUsluga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOtvaranjeUsluga.ForeColor = System.Drawing.Color.Black;
-            this.btnOtvaranjeUsluga.Image = global::Login.Properties.Resources.ugovaranje;
+            this.btnOtvaranjeUsluga.Image = global::MobiFinance.Properties.Resources.ugovaranje;
             this.btnOtvaranjeUsluga.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOtvaranjeUsluga.Location = new System.Drawing.Point(484, 287);
             this.btnOtvaranjeUsluga.Name = "btnOtvaranjeUsluga";
@@ -74,7 +74,7 @@
             // 
             this.btnPregledKlijenata.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPregledKlijenata.ForeColor = System.Drawing.Color.Black;
-            this.btnPregledKlijenata.Image = global::Login.Properties.Resources.search;
+            this.btnPregledKlijenata.Image = global::MobiFinance.Properties.Resources.search;
             this.btnPregledKlijenata.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPregledKlijenata.Location = new System.Drawing.Point(103, 217);
             this.btnPregledKlijenata.Name = "btnPregledKlijenata";
@@ -90,7 +90,7 @@
             // 
             this.btnMjenjacnica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMjenjacnica.ForeColor = System.Drawing.Color.Black;
-            this.btnMjenjacnica.Image = global::Login.Properties.Resources.exchange;
+            this.btnMjenjacnica.Image = global::MobiFinance.Properties.Resources.exchange;
             this.btnMjenjacnica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMjenjacnica.Location = new System.Drawing.Point(484, 217);
             this.btnMjenjacnica.Name = "btnMjenjacnica";
@@ -105,7 +105,7 @@
             // 
             this.btnUplatnica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUplatnica.ForeColor = System.Drawing.Color.Black;
-            this.btnUplatnica.Image = global::Login.Properties.Resources.uplatnica;
+            this.btnUplatnica.Image = global::MobiFinance.Properties.Resources.uplatnica;
             this.btnUplatnica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUplatnica.Location = new System.Drawing.Point(822, 287);
             this.btnUplatnica.Name = "btnUplatnica";
@@ -120,7 +120,7 @@
             // 
             this.btnOtplatnaTablica.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOtplatnaTablica.ForeColor = System.Drawing.Color.Black;
-            this.btnOtplatnaTablica.Image = global::Login.Properties.Resources.calcul;
+            this.btnOtplatnaTablica.Image = global::MobiFinance.Properties.Resources.calcul;
             this.btnOtplatnaTablica.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOtplatnaTablica.Location = new System.Drawing.Point(103, 287);
             this.btnOtplatnaTablica.Name = "btnOtplatnaTablica";
@@ -136,7 +136,7 @@
             // 
             this.btnUsluge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsluge.ForeColor = System.Drawing.Color.Black;
-            this.btnUsluge.Image = global::Login.Properties.Resources.popis;
+            this.btnUsluge.Image = global::MobiFinance.Properties.Resources.popis;
             this.btnUsluge.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsluge.Location = new System.Drawing.Point(484, 360);
             this.btnUsluge.Name = "btnUsluge";

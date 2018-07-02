@@ -68,7 +68,7 @@
             // 
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.Black;
-            this.btnFilter.Image = global::Login.Properties.Resources.filter1;
+            this.btnFilter.Image = global::MobiFinance.Properties.Resources.filter1;
             this.btnFilter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFilter.Location = new System.Drawing.Point(957, 210);
             this.btnFilter.Name = "btnFilter";
@@ -92,7 +92,7 @@
             // 
             this.btnDodajPrivatnog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajPrivatnog.ForeColor = System.Drawing.Color.Black;
-            this.btnDodajPrivatnog.Image = global::Login.Properties.Resources.addUser;
+            this.btnDodajPrivatnog.Image = global::MobiFinance.Properties.Resources.addUser;
             this.btnDodajPrivatnog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDodajPrivatnog.Location = new System.Drawing.Point(808, 283);
             this.btnDodajPrivatnog.Name = "btnDodajPrivatnog";
@@ -107,7 +107,7 @@
             // 
             this.btnDodajPoslovnog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodajPoslovnog.ForeColor = System.Drawing.Color.Black;
-            this.btnDodajPoslovnog.Image = global::Login.Properties.Resources.addUser1;
+            this.btnDodajPoslovnog.Image = global::MobiFinance.Properties.Resources.addUser1;
             this.btnDodajPoslovnog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDodajPoslovnog.Location = new System.Drawing.Point(808, 346);
             this.btnDodajPoslovnog.Name = "btnDodajPoslovnog";

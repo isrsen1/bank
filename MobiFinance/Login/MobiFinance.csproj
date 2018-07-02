@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E6F481B6-4E21-4AE4-8195-87F7F3D727D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Login</RootNamespace>
-    <AssemblyName>Login</AssemblyName>
+    <RootNamespace>MobiFinance</RootNamespace>
+    <AssemblyName>MobiFinance</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
