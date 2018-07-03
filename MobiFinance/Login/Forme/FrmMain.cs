@@ -68,8 +68,13 @@ namespace Login.Forme
 
         private void btnUplatnica_Click(object sender, EventArgs e)
         {
+
+            MobiFinance.Forme.FrmKreditiKorisnika formaPopisKredita = new MobiFinance.Forme.FrmKreditiKorisnika();
             this.Hide();
-          
+            formaPopisKredita.ShowDialog();
+            this.Show();
+
+
         }
     }
 }
