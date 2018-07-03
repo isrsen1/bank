@@ -14,6 +14,7 @@ namespace Login.Forme
     {
 
         private Kredit_ krediti = new Kredit_();
+        private Otplatna_tablica dioOtplate = null;
         public BindingList<Otplatna_tablica> ListaOtplate;
         public double RekurzivnaKamatnaStopa = 0;
         private double anuitet = 0;
@@ -46,7 +47,21 @@ namespace Login.Forme
             }
         }
 
-        public void IzracunajOtplatnuTablicu() { }
+        public void IzracunajOtplatnuTablicu(double r,double anuitet,Kredit_ pom) {
+
+            double ostatakDuga = 0;
+            ostatakDuga = pom.Glavnica;
+            double otplatnaKvota = 0;
+            double otplaceniDioDuga = 0;
+            double kamataRazdoblja = 0;
+            for (int i=1;i<=pom.RokOtplate;i++) {
+                kamataRazdoblja = pom.IzracunajKamatuRazdoblja(ostatakDuga,r);
+                otplatnaKvota = pom.IzracunajOtplaceniDioDuga(otplaceniDioDuga,otplatnaKvota);
+                dioOtplate = new Otplatna_tablica();
+
+            }
+
+        }
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
