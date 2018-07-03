@@ -98,6 +98,12 @@
     <Compile Include="Forme\FrmDodajKlijentaPrivatni.Designer.cs">
       <DependentUpon>FrmDodajKlijentaPrivatni.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forme\FrmGotovaUplatnica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\FrmGotovaUplatnica.Designer.cs">
+      <DependentUpon>FrmGotovaUplatnica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forme\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmDodajKlijentaPrivatni.resx">
       <DependentUpon>FrmDodajKlijentaPrivatni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\FrmGotovaUplatnica.resx">
+      <DependentUpon>FrmGotovaUplatnica.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forme\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
