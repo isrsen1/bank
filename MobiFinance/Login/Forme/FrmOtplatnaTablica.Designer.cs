@@ -116,7 +116,7 @@
             this.dgvOtplatnaTablica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dgvOtplatnaTablica.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvOtplatnaTablica.Size = new System.Drawing.Size(643, 214);
+            this.dgvOtplatnaTablica.Size = new System.Drawing.Size(646, 214);
             this.dgvOtplatnaTablica.TabIndex = 1;
             // 
             // brojMjesecaDataGridViewTextBoxColumn

@@ -41,6 +41,7 @@ namespace Login.Forme
                 RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
                 anuitet = kredit.IzracunajAnuitet(RekurzivnaKamatnaStopa);
                 IzracunajOtplatnuTablicu(RekurzivnaKamatnaStopa,anuitet,kredit);
+               
             }
             catch (Exception)
             {
@@ -57,7 +58,9 @@ namespace Login.Forme
             double kamataRazdoblja = 0;
             for (int i=1;i<=pom.RokOtplate;i++) {
                 kamataRazdoblja = pom.IzracunajKamatuRazdoblja(ostatakDuga,r);
-                otplatnaKvota = pom.IzracunajOtplaceniDioDuga(otplaceniDioDuga,otplatnaKvota);
+
+                otplatnaKvota = pom.IzracunajOtplatnuKvotu(anuitet,kamataRazdoblja);
+                otplaceniDioDuga = pom.IzracunajOtplaceniDioDuga(otplaceniDioDuga,otplatnaKvota);
                 dioOtplate = new Otplatna_tablica(i,kamataRazdoblja,anuitet,otplatnaKvota,ostatakDuga,otplaceniDioDuga,i);
                 pom.DodajZapisUOtplatnu(dioOtplate);
                 ostatakDuga = pom.IzracunajOstatakDUga(ostatakDuga,otplatnaKvota);
@@ -80,6 +83,7 @@ namespace Login.Forme
             {
                 NapuniDataGridView(odabraniKredit);
                 OsvjeziEkran(odabraniKredit);
+
             }
             catch (Exception) {
                 MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
