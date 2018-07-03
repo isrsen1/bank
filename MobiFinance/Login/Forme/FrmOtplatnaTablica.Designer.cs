@@ -73,6 +73,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvOtplatnaTablica.AutoGenerateColumns = false;
+            this.dgvOtplatnaTablica.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvOtplatnaTablica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOtplatnaTablica.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.brojMjesecaDataGridViewTextBoxColumn,
@@ -85,6 +86,7 @@
             this.kreditidDataGridViewTextBoxColumn,
             this.kreditDataGridViewTextBoxColumn});
             this.dgvOtplatnaTablica.DataSource = this.otplatnatablicaBindingSource;
+            this.dgvOtplatnaTablica.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvOtplatnaTablica.Location = new System.Drawing.Point(30, 180);
             this.dgvOtplatnaTablica.Name = "dgvOtplatnaTablica";
             this.dgvOtplatnaTablica.Size = new System.Drawing.Size(643, 214);

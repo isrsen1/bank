@@ -79,6 +79,7 @@ namespace Login.Forme
             try
             {
                 NapuniDataGridView(odabraniKredit);
+                OsvjeziEkran(odabraniKredit);
             }
             catch (Exception) {
                 MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
