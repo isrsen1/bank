@@ -54,8 +54,6 @@
             this.stednjasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvKrediti = new System.Windows.Forms.DataGridView();
-            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.uiUplatnicazaKredit = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumPocetkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,6 +66,8 @@
             this.klijentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.zaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otplatnatablicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uiUplatnicazaKredit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnika)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKrediti)).BeginInit();
@@ -123,7 +123,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -245,6 +245,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvKrediti.AutoGenerateColumns = false;
+            this.dgvKrediti.BackgroundColor = System.Drawing.Color.White;
             this.dgvKrediti.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvKrediti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvKrediti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -264,7 +265,7 @@
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -276,21 +277,8 @@
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
             this.dgvKrediti.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvKrediti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKrediti.Size = new System.Drawing.Size(663, 191);
+            this.dgvKrediti.Size = new System.Drawing.Size(645, 191);
             this.dgvKrediti.TabIndex = 4;
-            // 
-            // kreditBindingSource
-            // 
-            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
-            // 
-            // uiUplatnicazaKredit
-            // 
-            this.uiUplatnicazaKredit.Image = global::MobiFinance.Properties.Resources.settings;
-            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(779, 135);
-            this.uiUplatnicazaKredit.Name = "uiUplatnicazaKredit";
-            this.uiUplatnicazaKredit.Size = new System.Drawing.Size(94, 57);
-            this.uiUplatnicazaKredit.TabIndex = 5;
-            this.uiUplatnicazaKredit.UseVisualStyleBackColor = true;
             // 
             // idDataGridViewTextBoxColumn1
             // 
@@ -369,6 +357,19 @@
             this.otplatnatablicaDataGridViewTextBoxColumn.HeaderText = "Otplatna_tablica";
             this.otplatnatablicaDataGridViewTextBoxColumn.Name = "otplatnatablicaDataGridViewTextBoxColumn";
             this.otplatnatablicaDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kreditBindingSource
+            // 
+            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            // 
+            // uiUplatnicazaKredit
+            // 
+            this.uiUplatnicazaKredit.Image = global::MobiFinance.Properties.Resources.settings;
+            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(779, 135);
+            this.uiUplatnicazaKredit.Name = "uiUplatnicazaKredit";
+            this.uiUplatnicazaKredit.Size = new System.Drawing.Size(94, 57);
+            this.uiUplatnicazaKredit.TabIndex = 5;
+            this.uiUplatnicazaKredit.UseVisualStyleBackColor = true;
             // 
             // FrmKreditiKorisnika
             // 
