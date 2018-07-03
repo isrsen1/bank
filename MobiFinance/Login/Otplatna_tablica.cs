@@ -24,5 +24,17 @@ namespace Login
         public int BrojMjeseca { get; set; }
     
         public virtual Kredit_ Kredit_ { get; set; }
+
+        public Otplatna_tablica(int _id, double _kamate, double _anuitet, double _otplatnaKvota, double _ostatakDuga, double _otplaceniDio, int _brojMjeseca)
+        {
+            Id = _id;
+            Kamate = _kamate;
+            Anuitet = _anuitet;
+            OtplatnaKvota = _otplatnaKvota;
+            OstatakDuga = _ostatakDuga;
+            OtplaceniDio = _otplaceniDio;
+            BrojMjeseca = _brojMjeseca;
+
+        }
     }
 }
