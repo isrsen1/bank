@@ -105,7 +105,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -116,6 +116,7 @@
             this.dgvOtplatnaTablica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             this.dgvOtplatnaTablica.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvOtplatnaTablica.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvOtplatnaTablica.Size = new System.Drawing.Size(646, 214);
             this.dgvOtplatnaTablica.TabIndex = 1;
             // 
