@@ -17,6 +17,7 @@ namespace Login.Forme
         public BindingList<Otplatna_tablica> ListaOtplate;
         public double RekurzivnaKamatnaStopa = 0;
         private double anuitet = 0;
+        private Kredit_ odabraniKredit;
         public FrmOtplatnaTablica()
         {
             InitializeComponent();
@@ -34,7 +35,12 @@ namespace Login.Forme
 
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
+            odabraniKredit.KolekcijaZapisa.Clear();
+            try {
+                RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
+            }
+            catch { }
         }
     }
 }
