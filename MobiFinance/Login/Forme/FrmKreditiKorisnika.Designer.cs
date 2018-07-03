@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.uiNazad = new System.Windows.Forms.Button();
             this.dgvPrikazKorisnika = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -80,10 +82,13 @@
             // 
             this.dgvPrikazKorisnika.AllowUserToAddRows = false;
             this.dgvPrikazKorisnika.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgvPrikazKorisnika.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPrikazKorisnika.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrikazKorisnika.AutoGenerateColumns = false;
+            this.dgvPrikazKorisnika.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvPrikazKorisnika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrikazKorisnika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -200,6 +205,8 @@
             // 
             this.dgvKrediti.AllowUserToAddRows = false;
             this.dgvKrediti.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvKrediti.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvKrediti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
