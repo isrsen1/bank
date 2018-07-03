@@ -40,7 +40,9 @@ namespace Login.Forme
             try {
                 RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
             }
-            catch { }
+            catch(Exception) {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
