@@ -63,5 +63,15 @@ namespace MobiFinance.Forme
                 MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void uiUplatnicazaKredit_Click(object sender, EventArgs e)
+        {
+            try {
+                FrmGotovaUplatnica novaUplatnica = new FrmGotovaUplatnica(klijentBindingSource.Current as Klijent, kreditBindingSource.Current as Kredit_);
+            }
+            catch (Exception) {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            }
     }
 }

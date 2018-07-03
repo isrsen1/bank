@@ -60,8 +60,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.uiPrimateljPodaci = new System.Windows.Forms.TextBox();
             this.uiGeneriraniBarcode = new System.Windows.Forms.PictureBox();
+            this.uiPrimateljPodaci = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -213,7 +213,7 @@
             // 
             // uiOpisPlacanja
             // 
-            this.uiOpisPlacanja.Location = new System.Drawing.Point(484, 165);
+            this.uiOpisPlacanja.Location = new System.Drawing.Point(472, 167);
             this.uiOpisPlacanja.Multiline = true;
             this.uiOpisPlacanja.Name = "uiOpisPlacanja";
             this.uiOpisPlacanja.Size = new System.Drawing.Size(199, 74);
@@ -222,7 +222,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(407, 183);
+            this.label11.Location = new System.Drawing.Point(395, 180);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 13);
             this.label11.TabIndex = 23;
@@ -390,14 +390,6 @@
             this.checkBox1.TabIndex = 3;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // uiPrimateljPodaci
-            // 
-            this.uiPrimateljPodaci.Location = new System.Drawing.Point(9, 151);
-            this.uiPrimateljPodaci.Multiline = true;
-            this.uiPrimateljPodaci.Name = "uiPrimateljPodaci";
-            this.uiPrimateljPodaci.Size = new System.Drawing.Size(179, 88);
-            this.uiPrimateljPodaci.TabIndex = 1;
-            // 
             // uiGeneriraniBarcode
             // 
             this.uiGeneriraniBarcode.BackColor = System.Drawing.Color.White;
@@ -406,6 +398,14 @@
             this.uiGeneriraniBarcode.Size = new System.Drawing.Size(225, 95);
             this.uiGeneriraniBarcode.TabIndex = 2;
             this.uiGeneriraniBarcode.TabStop = false;
+            // 
+            // uiPrimateljPodaci
+            // 
+            this.uiPrimateljPodaci.Location = new System.Drawing.Point(9, 151);
+            this.uiPrimateljPodaci.Multiline = true;
+            this.uiPrimateljPodaci.Name = "uiPrimateljPodaci";
+            this.uiPrimateljPodaci.Size = new System.Drawing.Size(179, 88);
+            this.uiPrimateljPodaci.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -601,7 +601,9 @@
             this.Controls.Add(this.uiIzvoz);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmGotovaUplatnica";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGotovaUplatnica";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
