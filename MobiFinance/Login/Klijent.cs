@@ -11,7 +11,14 @@ namespace Login
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
     public partial class Klijent
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -41,5 +48,16 @@ namespace Login
         public virtual ICollection<Račun> Račun { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stednja> Stednjas { get; set; }
+
+        public BindingList<Klijent> DohvatiKorisnike()
+        {
+
+            BindingList<Klijent> lista = null;
+            using (BankaEntities db = new BankaEntities())
+            {
+                lista = new BindingList<Klijent>(db.Klijents.SqlQuery("Select *from klijent").ToList());
+            }
+            return lista;
+        }
     }
 }
