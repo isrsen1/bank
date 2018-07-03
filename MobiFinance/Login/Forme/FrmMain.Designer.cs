@@ -115,6 +115,7 @@
             this.btnUplatnica.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnUplatnica.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUplatnica.UseVisualStyleBackColor = true;
+            this.btnUplatnica.Click += new System.EventHandler(this.btnUplatnica_Click);
             // 
             // btnOtplatnaTablica
             // 
@@ -154,7 +155,7 @@
             this.lblGlavniIzbornik.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGlavniIzbornik.Location = new System.Drawing.Point(474, 118);
             this.lblGlavniIzbornik.Name = "lblGlavniIzbornik";
-            this.lblGlavniIzbornik.Size = new System.Drawing.Size(232, 38);
+            this.lblGlavniIzbornik.Size = new System.Drawing.Size(192, 31);
             this.lblGlavniIzbornik.TabIndex = 9;
             this.lblGlavniIzbornik.Text = "Glavni izbornik";
             // 
@@ -171,7 +172,7 @@
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 474);
             this.Controls.Add(this.btnOdjaviSe);

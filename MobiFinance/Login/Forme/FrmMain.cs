@@ -65,5 +65,11 @@ namespace Login.Forme
 
             }
         }
+
+        private void btnUplatnica_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+          
+        }
     }
 }
