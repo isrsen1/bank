@@ -26,6 +26,13 @@ namespace MobiFinance.Forme
             Kredit = _kredit;
             Klijent = _klijent;
         }
+        public void ZatvoriFormu() {
+            this.Close();
+        }
 
+        private void uiNatrag_Click(object sender, EventArgs e)
+        {
+            ZatvoriFormu();
+        }
     }
 }

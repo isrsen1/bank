@@ -571,6 +571,7 @@
             this.uiNatrag.TabIndex = 5;
             this.uiNatrag.Text = "Natrag";
             this.uiNatrag.UseVisualStyleBackColor = true;
+            this.uiNatrag.Click += new System.EventHandler(this.uiNatrag_Click);
             // 
             // uiIzvoz
             // 
