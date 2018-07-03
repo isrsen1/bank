@@ -68,6 +68,9 @@ namespace MobiFinance.Forme
         {
             try {
                 FrmGotovaUplatnica novaUplatnica = new FrmGotovaUplatnica(klijentBindingSource.Current as Klijent, kreditBindingSource.Current as Kredit_);
+                this.Hide();
+                novaUplatnica.ShowDialog();
+                this.Show();
             }
             catch (Exception) {
                 MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
