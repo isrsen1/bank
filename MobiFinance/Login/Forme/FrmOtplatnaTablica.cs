@@ -40,6 +40,7 @@ namespace Login.Forme
             {
                 RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
                 anuitet = kredit.IzracunajAnuitet(RekurzivnaKamatnaStopa);
+                IzracunajOtplatnuTablicu(RekurzivnaKamatnaStopa,anuitet,kredit);
             }
             catch (Exception)
             {
@@ -75,7 +76,15 @@ namespace Login.Forme
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
             odabraniKredit.KolekcijaZapisa.Clear();
-           
+            try
+            {
+                NapuniDataGridView(odabraniKredit);
+            }
+            catch (Exception) {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+
         }
     }
 }
