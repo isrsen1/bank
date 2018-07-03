@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Login.Forme
 {
-    public partial class FrmOtplatnaTablica : Form
+    public partial class FrmOtplatnaTablica : Template
     {
         public FrmOtplatnaTablica()
         {
