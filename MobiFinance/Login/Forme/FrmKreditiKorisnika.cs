@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MobiFinance;
+using Login;
 
 namespace MobiFinance.Forme
 {
     public partial class FrmKreditiKorisnika : Login.Template
     {
+
+        public Klijent OdabraniKlijent = new Klijent();
+        public Kredit_ OdabraniKredit = new Kredit_();
         public FrmKreditiKorisnika()
         {
             InitializeComponent();
