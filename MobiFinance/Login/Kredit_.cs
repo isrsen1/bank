@@ -79,7 +79,8 @@ namespace Login
             return Math.Round(dio+kvota,2);
         }
         public double IzracunajOstatakDUga(double ostatak,double kvota) {
-
+            double ostatakDuga = Math.Round(ostatak-kvota,2);
+            return ostatakDuga;
         }
     }
 }
