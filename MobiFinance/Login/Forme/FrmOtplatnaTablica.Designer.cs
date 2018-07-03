@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOtplatnaTablica));
             this.cbPopisKredita = new System.Windows.Forms.ComboBox();
             this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -100,9 +102,20 @@
             this.kreditidDataGridViewTextBoxColumn,
             this.kreditDataGridViewTextBoxColumn});
             this.dgvOtplatnaTablica.DataSource = this.otplatnatablicaBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOtplatnaTablica.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOtplatnaTablica.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvOtplatnaTablica.Location = new System.Drawing.Point(30, 180);
             this.dgvOtplatnaTablica.Name = "dgvOtplatnaTablica";
+            this.dgvOtplatnaTablica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dgvOtplatnaTablica.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOtplatnaTablica.Size = new System.Drawing.Size(643, 214);
             this.dgvOtplatnaTablica.TabIndex = 1;
             // 
@@ -192,6 +205,9 @@
             this.Name = "FrmOtplatnaTablica";
             this.Text = "FrmOtplatnaTablica";
             this.Load += new System.EventHandler(this.FrmOtplatnaTablica_Load);
+            this.Controls.SetChildIndex(this.cbPopisKredita, 0);
+            this.Controls.SetChildIndex(this.dgvOtplatnaTablica, 0);
+            this.Controls.SetChildIndex(this.btnPrintanje, 0);
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.otplatnatablicaBindingSource)).EndInit();
