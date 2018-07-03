@@ -28,20 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOtplatnaTablica));
             this.cbPopisKredita = new System.Windows.Forms.ComboBox();
             this.dgvOtplatnaTablica = new System.Windows.Forms.DataGridView();
             this.btnPrintanje = new System.Windows.Forms.Button();
+            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cbPopisKredita
             // 
+            this.cbPopisKredita.DataSource = this.kreditBindingSource;
+            this.cbPopisKredita.DisplayMember = "NazivKredita";
             this.cbPopisKredita.FormattingEnabled = true;
             this.cbPopisKredita.Location = new System.Drawing.Point(12, 139);
             this.cbPopisKredita.Name = "cbPopisKredita";
             this.cbPopisKredita.Size = new System.Drawing.Size(319, 21);
             this.cbPopisKredita.TabIndex = 0;
+            this.cbPopisKredita.ValueMember = "Id";
             // 
             // dgvOtplatnaTablica
             // 
@@ -65,6 +71,10 @@
             this.btnPrintanje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrintanje.UseVisualStyleBackColor = true;
             // 
+            // kreditBindingSource
+            // 
+            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            // 
             // FrmOtplatnaTablica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,6 +90,7 @@
             this.Controls.SetChildIndex(this.dgvOtplatnaTablica, 0);
             this.Controls.SetChildIndex(this.btnPrintanje, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -89,5 +100,6 @@
         private System.Windows.Forms.ComboBox cbPopisKredita;
         private System.Windows.Forms.DataGridView dgvOtplatnaTablica;
         private System.Windows.Forms.Button btnPrintanje;
+        private System.Windows.Forms.BindingSource kreditBindingSource;
     }
 }

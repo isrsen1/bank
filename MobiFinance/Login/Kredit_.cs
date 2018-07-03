@@ -11,7 +11,14 @@ namespace Login
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+
     public partial class Kredit_
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -29,10 +36,20 @@ namespace Login
         public Nullable<int> Klijent_id { get; set; }
         public double KamatnaStopa { get; set; }
         public string NazivKredita { get; set; }
-    
+
+        public List<Otplatna_tablica> KolekcijaZapisa = new List<Otplatna_tablica>();
+
         public virtual Klijent Klijent { get; set; }
         public virtual Zaposlenik Zaposlenik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Otplatna_tablica> Otplatna_tablica { get; set; }
+
+        public BindingList<Kredit_> DohvatiKredite() {
+            BindingList<Kredit_> lista = null;
+            using (BankaEntities db= new BankaEntities()) {
+                lista = new BindingList<Kredit_>(db.Kredit_.SqlQuery("Select *from Kredit_ where status=1").ToList());
+            }
+            return lista;
+        }
     }
 }
