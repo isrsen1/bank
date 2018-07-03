@@ -21,5 +21,14 @@ namespace MobiFinance.Forme
         {
 
         }
+
+        public void ZatvoriFormu() {
+            this.Close();
+        }
+
+        private void uiNazad_Click(object sender, EventArgs e)
+        {
+            ZatvoriFormu(); 
+        }
     }
 }
