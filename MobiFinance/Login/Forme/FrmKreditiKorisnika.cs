@@ -30,10 +30,14 @@ namespace MobiFinance.Forme
             klijentBindingSource.DataSource = Klijent.DohvatiKorisnike();
         }
 
-
+        public void PrikaziKrediteOdabranogKorisnika(Klijent k) {
+            kreditBindingSource.DataSource = null;
+            kreditBindingSource.DataSource = Kredit.DohvatiKrediteKorisnika(k);
+        }
         private void FrmKreditiKorisnika_Load(object sender, EventArgs e)
         {
             PrikaziKorisnike();
+            
 
         }
 

@@ -52,6 +52,18 @@ namespace Login
             return lista;
         }
 
+        public BindingList<Kredit_> DohvatiKrediteKorisnika(Klijent klijent)
+        {
+
+            BindingList<Kredit_> lista = null;
+            using (var db = new BankaEntities())
+            {
+                db.Klijents.Attach(klijent);
+                lista = new BindingList<Kredit_>(db.Kredit_.SqlQuery("Select *from kredit_ where status=1 and klijent_id='" + Klijent_id + "'").ToList());
+            }
+            return lista;
+        }
+
         public void DodajZapisUOtplatnu(Otplatna_tablica otplata) {
             KolekcijaZapisa.Add(otplata);
         }
