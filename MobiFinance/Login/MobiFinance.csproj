@@ -295,6 +295,7 @@
       <DependentUpon>BazaPodatakaProjektPIMODEL.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Login.Klijent.datasource" />
     <None Include="Properties\DataSources\Login.Kredit_.datasource" />
     <None Include="Properties\DataSources\Login.Otplatna_tablica.datasource" />
     <None Include="Properties\Settings.settings">
@@ -378,6 +379,9 @@
       <DependentUpon>BazaPodatakaProjektPIMODEL.edmx</DependentUpon>
       <LastGenOutput>BazaPodatakaProjektPIMODEL.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\printer2.png" />
+    <None Include="Resources\settings1.png" />
+    <None Include="Resources\printer1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
