@@ -14,6 +14,9 @@ namespace Login.Forme
     {
 
         private Kredit_ krediti = new Kredit_();
+        public BindingList<Otplatna_tablica> ListaOtplate;
+        public double RekurzivnaKamatnaStopa = 0;
+        private double anuitet = 0;
         public FrmOtplatnaTablica()
         {
             InitializeComponent();
@@ -23,9 +26,15 @@ namespace Login.Forme
             kreditBindingSource.DataSource = krediti.DohvatiKredite();
         }
 
+
         private void FrmOtplatnaTablica_Load(object sender, EventArgs e)
         {
             PrikaziKredite();
+        }
+
+        private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

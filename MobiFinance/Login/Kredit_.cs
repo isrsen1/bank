@@ -51,5 +51,15 @@ namespace Login
             }
             return lista;
         }
+
+        public void DodajZapisUOtplatnu(Otplatna_tablica otplata) {
+            KolekcijaZapisa.Add(otplata);
+        }
+
+        public double IzracunajRekurzivnuKamatnuStopu() {
+            double p = this.KamatnaStopa / 12;
+            double pom = 1 + (p / 100);
+            return pom;
+        }
     }
 }
