@@ -66,8 +66,11 @@ namespace Login.Forme
         }
 
         public void OsvjeziEkran(Kredit_ odabraniKredit) {
-
+            otplatnatablicaBindingSource.DataSource = null;
+            ListaOtplate = new BindingList<Otplatna_tablica>(odabraniKredit.KolekcijaZapisa);
+            otplatnatablicaBindingSource.DataSource = ListaOtplate;
         }
+
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
