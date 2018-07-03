@@ -16,5 +16,10 @@ namespace Login.Forme
         {
             InitializeComponent();
         }
+
+        private void FrmOtplatnaTablica_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
