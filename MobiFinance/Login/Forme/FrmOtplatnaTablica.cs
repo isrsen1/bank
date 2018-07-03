@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
 
 namespace Login.Forme
 {
     public partial class FrmOtplatnaTablica : Template
     {
-
+        private DGVPrinter printanjeTablice = new DGVPrinter();
         private Kredit_ krediti = new Kredit_();
         private Otplatna_tablica dioOtplate = null;
         public BindingList<Otplatna_tablica> ListaOtplate;
@@ -75,6 +76,20 @@ namespace Login.Forme
             otplatnatablicaBindingSource.DataSource = ListaOtplate;
         }
 
+        public void Printanje(DGVPrinter printer) {
+            printer.Title = "Otplatna tablica ";
+            printer.SubTitle = string.Format("{0}", DateTime.Now.Date);
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+
+            printer.PageNumberAlignment = StringAlignment.Far;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.Footer = "Zagrebačka banka";
+            printer.FooterSpacing = 15;
+            printer.PrintDataGridView(dgvOtplatnaTablica);
+        }
+
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
@@ -90,6 +105,11 @@ namespace Login.Forme
 
             }
 
+        }
+
+        private void btnPrintanje_Click(object sender, EventArgs e)
+        {
+            Printanje(printanjeTablice);
         }
     }
 }

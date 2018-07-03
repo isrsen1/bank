@@ -193,6 +193,7 @@
             this.btnPrintanje.Text = "Printanje";
             this.btnPrintanje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrintanje.UseVisualStyleBackColor = true;
+            this.btnPrintanje.Click += new System.EventHandler(this.btnPrintanje_Click);
             // 
             // FrmOtplatnaTablica
             // 

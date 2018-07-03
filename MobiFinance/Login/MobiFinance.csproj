@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DGV Printer">
+      <HintPath>..\..\..\..\Downloads\DGV Printer.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -83,7 +86,6 @@
     <Compile Include="Bilanca.cs">
       <DependentUpon>BazaPodatakaProjektPIMODEL.tt</DependentUpon>
     </Compile>
-    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Forme\FrmDodajKlijentaPoslovni.cs">
       <SubType>Form</SubType>
     </Compile>
