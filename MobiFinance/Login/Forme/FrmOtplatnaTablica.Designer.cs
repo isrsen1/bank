@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOtplatnaTablica));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbPopisKredita = new System.Windows.Forms.ComboBox();
+            this.dgvOtplatnaTablica = new System.Windows.Forms.DataGridView();
             this.btnPrintanje = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // cbPopisKredita
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 139);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(319, 21);
-            this.comboBox1.TabIndex = 0;
+            this.cbPopisKredita.FormattingEnabled = true;
+            this.cbPopisKredita.Location = new System.Drawing.Point(12, 139);
+            this.cbPopisKredita.Name = "cbPopisKredita";
+            this.cbPopisKredita.Size = new System.Drawing.Size(319, 21);
+            this.cbPopisKredita.TabIndex = 0;
             // 
-            // dataGridView1
+            // dgvOtplatnaTablica
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(655, 214);
-            this.dataGridView1.TabIndex = 1;
+            this.dgvOtplatnaTablica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvOtplatnaTablica.Location = new System.Drawing.Point(12, 177);
+            this.dgvOtplatnaTablica.Name = "dgvOtplatnaTablica";
+            this.dgvOtplatnaTablica.Size = new System.Drawing.Size(655, 214);
+            this.dgvOtplatnaTablica.TabIndex = 1;
             // 
             // btnPrintanje
             // 
@@ -71,23 +71,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 450);
             this.Controls.Add(this.btnPrintanje);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dgvOtplatnaTablica);
+            this.Controls.Add(this.cbPopisKredita);
             this.Name = "FrmOtplatnaTablica";
             this.Text = "FrmOtplatnaTablica";
             this.Load += new System.EventHandler(this.FrmOtplatnaTablica_Load);
-            this.Controls.SetChildIndex(this.comboBox1, 0);
-            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.cbPopisKredita, 0);
+            this.Controls.SetChildIndex(this.dgvOtplatnaTablica, 0);
             this.Controls.SetChildIndex(this.btnPrintanje, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox cbPopisKredita;
+        private System.Windows.Forms.DataGridView dgvOtplatnaTablica;
         private System.Windows.Forms.Button btnPrintanje;
     }
 }
