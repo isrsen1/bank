@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace MobiFinance.Forme
 {
-    public partial class FrmKreditiKorisnika :Form
+    public partial class FrmKreditiKorisnika : Login.Template
     {
         public FrmKreditiKorisnika()
         {
             InitializeComponent();
+        }
+
+        private void FrmKreditiKorisnika_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
