@@ -50,5 +50,18 @@ namespace MobiFinance.Forme
             ZatvoriFormu();
             
         }
+
+        private void dgvPrikazKorisnika_SelectionChanged(object sender, EventArgs e)
+        {
+            odabraniKlijent = klijentBindingSource.Current as Klijent;
+            try
+            {
+                PrikaziKrediteOdabranogKorisnika(odabraniKlijent);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

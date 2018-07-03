@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.uiNazad = new System.Windows.Forms.Button();
             this.dgvPrikazKorisnika = new System.Windows.Forms.DataGridView();
-            this.dgvKrediti = new System.Windows.Forms.DataGridView();
-            this.uiUplatnicazaKredit = new System.Windows.Forms.Button();
-            this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +44,10 @@
             this.kreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.računDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stednjasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgvKrediti = new System.Windows.Forms.DataGridView();
+            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.uiUplatnicazaKredit = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumPocetkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,8 +61,8 @@
             this.zaposlenikDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otplatnatablicaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnika)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKrediti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKrediti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,6 +80,9 @@
             // 
             this.dgvPrikazKorisnika.AllowUserToAddRows = false;
             this.dgvPrikazKorisnika.AllowUserToDeleteRows = false;
+            this.dgvPrikazKorisnika.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrikazKorisnika.AutoGenerateColumns = false;
             this.dgvPrikazKorisnika.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPrikazKorisnika.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -102,49 +105,7 @@
             this.dgvPrikazKorisnika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrikazKorisnika.Size = new System.Drawing.Size(645, 97);
             this.dgvPrikazKorisnika.TabIndex = 3;
-            // 
-            // dgvKrediti
-            // 
-            this.dgvKrediti.AllowUserToAddRows = false;
-            this.dgvKrediti.AllowUserToDeleteRows = false;
-            this.dgvKrediti.AutoGenerateColumns = false;
-            this.dgvKrediti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKrediti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn1,
-            this.statusDataGridViewTextBoxColumn,
-            this.datumPocetkaDataGridViewTextBoxColumn,
-            this.glavnicaDataGridViewTextBoxColumn,
-            this.rokOtplateDataGridViewTextBoxColumn,
-            this.zaposlenikidDataGridViewTextBoxColumn,
-            this.klijentidDataGridViewTextBoxColumn,
-            this.kamatnaStopaDataGridViewTextBoxColumn,
-            this.nazivKreditaDataGridViewTextBoxColumn,
-            this.klijentDataGridViewTextBoxColumn,
-            this.zaposlenikDataGridViewTextBoxColumn,
-            this.otplatnatablicaDataGridViewTextBoxColumn});
-            this.dgvKrediti.DataSource = this.kreditBindingSource;
-            this.dgvKrediti.Location = new System.Drawing.Point(12, 257);
-            this.dgvKrediti.Name = "dgvKrediti";
-            this.dgvKrediti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKrediti.Size = new System.Drawing.Size(752, 191);
-            this.dgvKrediti.TabIndex = 4;
-            // 
-            // uiUplatnicazaKredit
-            // 
-            this.uiUplatnicazaKredit.Image = global::MobiFinance.Properties.Resources.settings;
-            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(779, 135);
-            this.uiUplatnicazaKredit.Name = "uiUplatnicazaKredit";
-            this.uiUplatnicazaKredit.Size = new System.Drawing.Size(94, 57);
-            this.uiUplatnicazaKredit.TabIndex = 5;
-            this.uiUplatnicazaKredit.UseVisualStyleBackColor = true;
-            // 
-            // klijentBindingSource
-            // 
-            this.klijentBindingSource.DataSource = typeof(Login.Klijent);
-            // 
-            // kreditBindingSource
-            // 
-            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            this.dgvPrikazKorisnika.SelectionChanged += new System.EventHandler(this.dgvPrikazKorisnika_SelectionChanged);
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -231,6 +192,52 @@
             this.stednjasDataGridViewTextBoxColumn.Name = "stednjasDataGridViewTextBoxColumn";
             this.stednjasDataGridViewTextBoxColumn.Visible = false;
             // 
+            // klijentBindingSource
+            // 
+            this.klijentBindingSource.DataSource = typeof(Login.Klijent);
+            // 
+            // dgvKrediti
+            // 
+            this.dgvKrediti.AllowUserToAddRows = false;
+            this.dgvKrediti.AllowUserToDeleteRows = false;
+            this.dgvKrediti.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvKrediti.AutoGenerateColumns = false;
+            this.dgvKrediti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKrediti.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn1,
+            this.statusDataGridViewTextBoxColumn,
+            this.datumPocetkaDataGridViewTextBoxColumn,
+            this.glavnicaDataGridViewTextBoxColumn,
+            this.rokOtplateDataGridViewTextBoxColumn,
+            this.zaposlenikidDataGridViewTextBoxColumn,
+            this.klijentidDataGridViewTextBoxColumn,
+            this.kamatnaStopaDataGridViewTextBoxColumn,
+            this.nazivKreditaDataGridViewTextBoxColumn,
+            this.klijentDataGridViewTextBoxColumn,
+            this.zaposlenikDataGridViewTextBoxColumn,
+            this.otplatnatablicaDataGridViewTextBoxColumn});
+            this.dgvKrediti.DataSource = this.kreditBindingSource;
+            this.dgvKrediti.Location = new System.Drawing.Point(12, 257);
+            this.dgvKrediti.Name = "dgvKrediti";
+            this.dgvKrediti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvKrediti.Size = new System.Drawing.Size(663, 191);
+            this.dgvKrediti.TabIndex = 4;
+            // 
+            // kreditBindingSource
+            // 
+            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            // 
+            // uiUplatnicazaKredit
+            // 
+            this.uiUplatnicazaKredit.Image = global::MobiFinance.Properties.Resources.settings;
+            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(779, 135);
+            this.uiUplatnicazaKredit.Name = "uiUplatnicazaKredit";
+            this.uiUplatnicazaKredit.Size = new System.Drawing.Size(94, 57);
+            this.uiUplatnicazaKredit.TabIndex = 5;
+            this.uiUplatnicazaKredit.UseVisualStyleBackColor = true;
+            // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
@@ -300,6 +307,7 @@
             this.zaposlenikDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenik";
             this.zaposlenikDataGridViewTextBoxColumn.HeaderText = "Zaposlenik";
             this.zaposlenikDataGridViewTextBoxColumn.Name = "zaposlenikDataGridViewTextBoxColumn";
+            this.zaposlenikDataGridViewTextBoxColumn.Visible = false;
             // 
             // otplatnatablicaDataGridViewTextBoxColumn
             // 
@@ -325,8 +333,8 @@
             this.Controls.SetChildIndex(this.dgvKrediti, 0);
             this.Controls.SetChildIndex(this.uiUplatnicazaKredit, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrikazKorisnika)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKrediti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.klijentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKrediti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).EndInit();
             this.ResumeLayout(false);
 

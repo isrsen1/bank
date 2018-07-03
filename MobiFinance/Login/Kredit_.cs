@@ -59,7 +59,7 @@ namespace Login
             using (var db = new BankaEntities())
             {
                 db.Klijents.Attach(klijent);
-                lista = new BindingList<Kredit_>(db.Kredit_.SqlQuery("Select *from kredit_ where status=1 and klijent_id='" + Klijent_id + "'").ToList());
+                lista = new BindingList<Kredit_>(db.Kredit_.SqlQuery("Select *from Kredit_ where Status=1 and Klijent_id='" + klijent.Id + "'").ToList());
             }
             return lista;
         }
