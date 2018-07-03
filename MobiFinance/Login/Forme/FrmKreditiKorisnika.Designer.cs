@@ -29,28 +29,56 @@
         private void InitializeComponent()
         {
             this.uiNazad = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // uiNazad
             // 
-            this.uiNazad.Location = new System.Drawing.Point(2, 113);
+            this.uiNazad.Image = global::MobiFinance.Properties.Resources.back;
+            this.uiNazad.Location = new System.Drawing.Point(12, 112);
             this.uiNazad.Name = "uiNazad";
-            this.uiNazad.Size = new System.Drawing.Size(124, 40);
+            this.uiNazad.Size = new System.Drawing.Size(101, 53);
             this.uiNazad.TabIndex = 2;
-            this.uiNazad.Text = "uiNazad";
             this.uiNazad.UseVisualStyleBackColor = true;
             this.uiNazad.Click += new System.EventHandler(this.uiNazad_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(155, 113);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(399, 97);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(155, 257);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(717, 113);
+            this.dataGridView2.TabIndex = 4;
             // 
             // FrmKreditiKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(908, 450);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.uiNazad);
             this.Name = "FrmKreditiKorisnika";
             this.Text = "FrmKreditiKorisnika";
             this.Load += new System.EventHandler(this.FrmKreditiKorisnika_Load);
             this.Controls.SetChildIndex(this.uiNazad, 0);
+            this.Controls.SetChildIndex(this.dataGridView1, 0);
+            this.Controls.SetChildIndex(this.dataGridView2, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -58,5 +86,7 @@
         #endregion
 
         private System.Windows.Forms.Button uiNazad;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
