@@ -111,5 +111,10 @@ namespace Login.Forme
         {
             Printanje(printanjeTablice);
         }
+
+        private void btnVratiNazad_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

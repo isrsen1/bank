@@ -48,6 +48,7 @@
             this.kreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otplatnatablicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnPrintanje = new System.Windows.Forms.Button();
+            this.btnVratiNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otplatnatablicaBindingSource)).BeginInit();
@@ -58,7 +59,7 @@
             this.cbPopisKredita.DataSource = this.kreditBindingSource;
             this.cbPopisKredita.DisplayMember = "NazivKredita";
             this.cbPopisKredita.FormattingEnabled = true;
-            this.cbPopisKredita.Location = new System.Drawing.Point(12, 139);
+            this.cbPopisKredita.Location = new System.Drawing.Point(87, 180);
             this.cbPopisKredita.Name = "cbPopisKredita";
             this.cbPopisKredita.Size = new System.Drawing.Size(319, 21);
             this.cbPopisKredita.TabIndex = 0;
@@ -111,7 +112,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvOtplatnaTablica.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvOtplatnaTablica.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvOtplatnaTablica.Location = new System.Drawing.Point(30, 180);
+            this.dgvOtplatnaTablica.Location = new System.Drawing.Point(87, 207);
             this.dgvOtplatnaTablica.Name = "dgvOtplatnaTablica";
             this.dgvOtplatnaTablica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
@@ -186,7 +187,7 @@
             this.btnPrintanje.ForeColor = System.Drawing.Color.Black;
             this.btnPrintanje.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintanje.Image")));
             this.btnPrintanje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintanje.Location = new System.Drawing.Point(711, 262);
+            this.btnPrintanje.Location = new System.Drawing.Point(739, 313);
             this.btnPrintanje.Name = "btnPrintanje";
             this.btnPrintanje.Size = new System.Drawing.Size(163, 61);
             this.btnPrintanje.TabIndex = 2;
@@ -195,11 +196,22 @@
             this.btnPrintanje.UseVisualStyleBackColor = true;
             this.btnPrintanje.Click += new System.EventHandler(this.btnPrintanje_Click);
             // 
+            // btnVratiNazad
+            // 
+            this.btnVratiNazad.Image = global::MobiFinance.Properties.Resources.back1;
+            this.btnVratiNazad.Location = new System.Drawing.Point(13, 113);
+            this.btnVratiNazad.Name = "btnVratiNazad";
+            this.btnVratiNazad.Size = new System.Drawing.Size(105, 61);
+            this.btnVratiNazad.TabIndex = 3;
+            this.btnVratiNazad.UseVisualStyleBackColor = true;
+            this.btnVratiNazad.Click += new System.EventHandler(this.btnVratiNazad_Click);
+            // 
             // FrmOtplatnaTablica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 450);
+            this.Controls.Add(this.btnVratiNazad);
             this.Controls.Add(this.btnPrintanje);
             this.Controls.Add(this.dgvOtplatnaTablica);
             this.Controls.Add(this.cbPopisKredita);
@@ -209,6 +221,7 @@
             this.Controls.SetChildIndex(this.cbPopisKredita, 0);
             this.Controls.SetChildIndex(this.dgvOtplatnaTablica, 0);
             this.Controls.SetChildIndex(this.btnPrintanje, 0);
+            this.Controls.SetChildIndex(this.btnVratiNazad, 0);
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.otplatnatablicaBindingSource)).EndInit();
@@ -232,5 +245,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kreditidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kreditDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource otplatnatablicaBindingSource;
+        private System.Windows.Forms.Button btnVratiNazad;
     }
 }
