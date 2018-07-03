@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOtplatnaTablica));
             this.cbPopisKredita = new System.Windows.Forms.ComboBox();
             this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvOtplatnaTablica = new System.Windows.Forms.DataGridView();
@@ -106,7 +105,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -185,9 +184,9 @@
             // 
             this.btnPrintanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintanje.ForeColor = System.Drawing.Color.Black;
-            this.btnPrintanje.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintanje.Image")));
+            this.btnPrintanje.Image = global::MobiFinance.Properties.Resources.printer1;
             this.btnPrintanje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintanje.Location = new System.Drawing.Point(739, 313);
+            this.btnPrintanje.Location = new System.Drawing.Point(749, 272);
             this.btnPrintanje.Name = "btnPrintanje";
             this.btnPrintanje.Size = new System.Drawing.Size(163, 61);
             this.btnPrintanje.TabIndex = 2;
