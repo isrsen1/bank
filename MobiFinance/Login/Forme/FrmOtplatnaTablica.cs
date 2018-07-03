@@ -33,6 +33,19 @@ namespace Login.Forme
         private void FrmOtplatnaTablica_Load(object sender, EventArgs e)
         {
             PrikaziKredite();
+            odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
+            odabraniKredit.KolekcijaZapisa.Clear();
+            try
+            {
+                NapuniDataGridView(odabraniKredit);
+                OsvjeziEkran(odabraniKredit);
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
 
         public void NapuniDataGridView(Kredit_ kredit)
