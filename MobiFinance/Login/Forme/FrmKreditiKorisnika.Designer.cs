@@ -34,6 +34,7 @@
             this.dgvKrediti = new System.Windows.Forms.DataGridView();
             this.uiUplatnicazaKredit = new System.Windows.Forms.Button();
             this.klijentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prezimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@
             this.kreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.računDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stednjasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datumPocetkaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,7 +69,7 @@
             // uiNazad
             // 
             this.uiNazad.Image = global::MobiFinance.Properties.Resources.back;
-            this.uiNazad.Location = new System.Drawing.Point(12, 112);
+            this.uiNazad.Location = new System.Drawing.Point(12, 95);
             this.uiNazad.Name = "uiNazad";
             this.uiNazad.Size = new System.Drawing.Size(101, 53);
             this.uiNazad.TabIndex = 2;
@@ -97,10 +97,10 @@
             this.računDataGridViewTextBoxColumn,
             this.stednjasDataGridViewTextBoxColumn});
             this.dgvPrikazKorisnika.DataSource = this.klijentBindingSource;
-            this.dgvPrikazKorisnika.Location = new System.Drawing.Point(143, 112);
+            this.dgvPrikazKorisnika.Location = new System.Drawing.Point(12, 154);
             this.dgvPrikazKorisnika.Name = "dgvPrikazKorisnika";
             this.dgvPrikazKorisnika.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPrikazKorisnika.Size = new System.Drawing.Size(448, 97);
+            this.dgvPrikazKorisnika.Size = new System.Drawing.Size(645, 97);
             this.dgvPrikazKorisnika.TabIndex = 3;
             // 
             // dgvKrediti
@@ -123,16 +123,16 @@
             this.zaposlenikDataGridViewTextBoxColumn,
             this.otplatnatablicaDataGridViewTextBoxColumn});
             this.dgvKrediti.DataSource = this.kreditBindingSource;
-            this.dgvKrediti.Location = new System.Drawing.Point(143, 225);
+            this.dgvKrediti.Location = new System.Drawing.Point(12, 257);
             this.dgvKrediti.Name = "dgvKrediti";
             this.dgvKrediti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKrediti.Size = new System.Drawing.Size(717, 191);
+            this.dgvKrediti.Size = new System.Drawing.Size(752, 191);
             this.dgvKrediti.TabIndex = 4;
             // 
             // uiUplatnicazaKredit
             // 
             this.uiUplatnicazaKredit.Image = global::MobiFinance.Properties.Resources.settings;
-            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(710, 123);
+            this.uiUplatnicazaKredit.Location = new System.Drawing.Point(779, 135);
             this.uiUplatnicazaKredit.Name = "uiUplatnicazaKredit";
             this.uiUplatnicazaKredit.Size = new System.Drawing.Size(94, 57);
             this.uiUplatnicazaKredit.TabIndex = 5;
@@ -142,11 +142,16 @@
             // 
             this.klijentBindingSource.DataSource = typeof(Login.Klijent);
             // 
+            // kreditBindingSource
+            // 
+            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            // 
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
             // 
             // imeDataGridViewTextBoxColumn
             // 
@@ -183,6 +188,7 @@
             this.primanjaDataGridViewTextBoxColumn.DataPropertyName = "Primanja";
             this.primanjaDataGridViewTextBoxColumn.HeaderText = "Primanja";
             this.primanjaDataGridViewTextBoxColumn.Name = "primanjaDataGridViewTextBoxColumn";
+            this.primanjaDataGridViewTextBoxColumn.Visible = false;
             // 
             // tipklijentaDataGridViewTextBoxColumn
             // 
@@ -195,40 +201,42 @@
             this.adresaDataGridViewTextBoxColumn.DataPropertyName = "Adresa";
             this.adresaDataGridViewTextBoxColumn.HeaderText = "Adresa";
             this.adresaDataGridViewTextBoxColumn.Name = "adresaDataGridViewTextBoxColumn";
+            this.adresaDataGridViewTextBoxColumn.Visible = false;
             // 
             // bilancasDataGridViewTextBoxColumn
             // 
             this.bilancasDataGridViewTextBoxColumn.DataPropertyName = "Bilancas";
             this.bilancasDataGridViewTextBoxColumn.HeaderText = "Bilancas";
             this.bilancasDataGridViewTextBoxColumn.Name = "bilancasDataGridViewTextBoxColumn";
+            this.bilancasDataGridViewTextBoxColumn.Visible = false;
             // 
             // kreditDataGridViewTextBoxColumn
             // 
             this.kreditDataGridViewTextBoxColumn.DataPropertyName = "Kredit_";
             this.kreditDataGridViewTextBoxColumn.HeaderText = "Kredit_";
             this.kreditDataGridViewTextBoxColumn.Name = "kreditDataGridViewTextBoxColumn";
+            this.kreditDataGridViewTextBoxColumn.Visible = false;
             // 
             // računDataGridViewTextBoxColumn
             // 
             this.računDataGridViewTextBoxColumn.DataPropertyName = "Račun";
             this.računDataGridViewTextBoxColumn.HeaderText = "Račun";
             this.računDataGridViewTextBoxColumn.Name = "računDataGridViewTextBoxColumn";
+            this.računDataGridViewTextBoxColumn.Visible = false;
             // 
             // stednjasDataGridViewTextBoxColumn
             // 
             this.stednjasDataGridViewTextBoxColumn.DataPropertyName = "Stednjas";
             this.stednjasDataGridViewTextBoxColumn.HeaderText = "Stednjas";
             this.stednjasDataGridViewTextBoxColumn.Name = "stednjasDataGridViewTextBoxColumn";
-            // 
-            // kreditBindingSource
-            // 
-            this.kreditBindingSource.DataSource = typeof(Login.Kredit_);
+            this.stednjasDataGridViewTextBoxColumn.Visible = false;
             // 
             // idDataGridViewTextBoxColumn1
             // 
             this.idDataGridViewTextBoxColumn1.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn1.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn1.Name = "idDataGridViewTextBoxColumn1";
+            this.idDataGridViewTextBoxColumn1.Visible = false;
             // 
             // statusDataGridViewTextBoxColumn
             // 
@@ -259,12 +267,14 @@
             this.zaposlenikidDataGridViewTextBoxColumn.DataPropertyName = "Zaposlenik_id";
             this.zaposlenikidDataGridViewTextBoxColumn.HeaderText = "Zaposlenik_id";
             this.zaposlenikidDataGridViewTextBoxColumn.Name = "zaposlenikidDataGridViewTextBoxColumn";
+            this.zaposlenikidDataGridViewTextBoxColumn.Visible = false;
             // 
             // klijentidDataGridViewTextBoxColumn
             // 
             this.klijentidDataGridViewTextBoxColumn.DataPropertyName = "Klijent_id";
             this.klijentidDataGridViewTextBoxColumn.HeaderText = "Klijent_id";
             this.klijentidDataGridViewTextBoxColumn.Name = "klijentidDataGridViewTextBoxColumn";
+            this.klijentidDataGridViewTextBoxColumn.Visible = false;
             // 
             // kamatnaStopaDataGridViewTextBoxColumn
             // 
@@ -283,6 +293,7 @@
             this.klijentDataGridViewTextBoxColumn.DataPropertyName = "Klijent";
             this.klijentDataGridViewTextBoxColumn.HeaderText = "Klijent";
             this.klijentDataGridViewTextBoxColumn.Name = "klijentDataGridViewTextBoxColumn";
+            this.klijentDataGridViewTextBoxColumn.Visible = false;
             // 
             // zaposlenikDataGridViewTextBoxColumn
             // 
@@ -295,6 +306,7 @@
             this.otplatnatablicaDataGridViewTextBoxColumn.DataPropertyName = "Otplatna_tablica";
             this.otplatnatablicaDataGridViewTextBoxColumn.HeaderText = "Otplatna_tablica";
             this.otplatnatablicaDataGridViewTextBoxColumn.Name = "otplatnatablicaDataGridViewTextBoxColumn";
+            this.otplatnatablicaDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmKreditiKorisnika
             // 
@@ -326,6 +338,8 @@
         private System.Windows.Forms.DataGridView dgvPrikazKorisnika;
         private System.Windows.Forms.DataGridView dgvKrediti;
         private System.Windows.Forms.Button uiUplatnicazaKredit;
+        private System.Windows.Forms.BindingSource klijentBindingSource;
+        private System.Windows.Forms.BindingSource kreditBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn imeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prezimeDataGridViewTextBoxColumn;
@@ -339,7 +353,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn kreditDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn računDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stednjasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource klijentBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn datumPocetkaDataGridViewTextBoxColumn;
@@ -352,6 +365,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn klijentDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn zaposlenikDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn otplatnatablicaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource kreditBindingSource;
     }
 }
