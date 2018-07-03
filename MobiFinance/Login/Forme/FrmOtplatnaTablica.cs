@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Login.Forme
 {
-    public partial class FrmOtplatnaTablica : Template
+    public partial class FrmOtplatnaTablica : Form
     {
 
         private Kredit_ krediti = new Kredit_();
