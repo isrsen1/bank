@@ -109,12 +109,20 @@ namespace Login.Forme
 
         private void btnPrintanje_Click(object sender, EventArgs e)
         {
-            Printanje(printanjeTablice);
+            try
+            {
+                Printanje(printanjeTablice);
+            }
+            catch (Exception ) {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
+        public void ZatvoriFormu() {
+            this.Close();
+        }
         private void btnVratiNazad_Click(object sender, EventArgs e)
         {
-            this.Close();
+            ZatvoriFormu();
         }
     }
 }
