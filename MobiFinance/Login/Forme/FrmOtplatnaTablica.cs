@@ -57,9 +57,15 @@ namespace Login.Forme
             for (int i=1;i<=pom.RokOtplate;i++) {
                 kamataRazdoblja = pom.IzracunajKamatuRazdoblja(ostatakDuga,r);
                 otplatnaKvota = pom.IzracunajOtplaceniDioDuga(otplaceniDioDuga,otplatnaKvota);
-                dioOtplate = new Otplatna_tablica();
+                dioOtplate = new Otplatna_tablica(i,kamataRazdoblja,anuitet,otplatnaKvota,ostatakDuga,otplaceniDioDuga,i);
+                pom.DodajZapisUOtplatnu(dioOtplate);
+                ostatakDuga = pom.IzracunajOstatakDUga(ostatakDuga,otplatnaKvota);
 
             }
+
+        }
+
+        public void OsvjeziEkran(Kredit_ odabraniKredit) {
 
         }
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
