@@ -33,16 +33,25 @@ namespace Login.Forme
             PrikaziKredite();
         }
 
+        public void NapuniDataGridView(Kredit_ kredit)
+        {
+            try
+            {
+                RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
+                anuitet = kredit.IzracunajAnuitet(RekurzivnaKamatnaStopa);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void IzracunajOtplatnuTablicu() { }
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
             odabraniKredit.KolekcijaZapisa.Clear();
-            try {
-                RekurzivnaKamatnaStopa = odabraniKredit.IzracunajRekurzivnuKamatnuStopu();
-            }
-            catch(Exception) {
-                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
     }
 }
