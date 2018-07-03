@@ -61,5 +61,25 @@ namespace Login
             double pom = 1 + (p / 100);
             return pom;
         }
+        public double IzracunajAnuitet(double r) {
+            double gornjiDio = 0;
+            double donjiDio = 0;
+            gornjiDio = Math.Pow(r,RokOtplate)*(r-1);
+            donjiDio = Math.Pow(r,this.RokOtplate)-1;
+            double anuitet = Glavnica * (gornjiDio / donjiDio);
+            return Math.Round(anuitet,2);
+        }
+        public double IzracunajKamatuRazdoblja(double ostatakDuga,double r) {
+            return Math.Round(ostatakDuga*(r-1),2);
+        }
+        public double IzracunajOtplatnuKvotu(double anuitet,double kamataRazdoblja) {
+            return Math.Round(anuitet-kamataRazdoblja,3);
+        }
+        public double IzracunajOtplaceniDioDuga(double dio,double kvota) {
+            return Math.Round(dio+kvota,2);
+        }
+        public double IzracunajOstatakDUga(double ostatak,double kvota) {
+
+        }
     }
 }
