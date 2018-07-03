@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmOtplatnaTablica));
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnPrintanje = new System.Windows.Forms.Button();
@@ -54,11 +55,14 @@
             // 
             this.btnPrintanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintanje.ForeColor = System.Drawing.Color.Black;
+            this.btnPrintanje.Image = ((System.Drawing.Image)(resources.GetObject("btnPrintanje.Image")));
+            this.btnPrintanje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPrintanje.Location = new System.Drawing.Point(711, 262);
             this.btnPrintanje.Name = "btnPrintanje";
-            this.btnPrintanje.Size = new System.Drawing.Size(141, 61);
+            this.btnPrintanje.Size = new System.Drawing.Size(163, 61);
             this.btnPrintanje.TabIndex = 2;
             this.btnPrintanje.Text = "Printanje";
+            this.btnPrintanje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnPrintanje.UseVisualStyleBackColor = true;
             // 
             // FrmOtplatnaTablica
