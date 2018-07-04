@@ -16,6 +16,10 @@ namespace MobiFinance.Forme
     {
         public Kredit_ Kredit;
         public Klijent Klijent;
+        public double KamatnaStopa;
+        public string Platitelj;
+        public string Primatelj;
+        public string Opis;
         public FrmGotovaUplatnica()
         {
             InitializeComponent();

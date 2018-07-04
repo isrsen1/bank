@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmGotovaUplatnica));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.uiPozivNaBrojPrimatelja = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -80,6 +81,8 @@
             this.uiNatrag = new System.Windows.Forms.Button();
             this.uiIzvoz = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiGeneriraniBarcode)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -592,6 +595,16 @@
             this.label23.TabIndex = 6;
             this.label23.Text = "NALOG ZA NACIONALNA PLAĆANJA";
             // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
             // FrmGotovaUplatnica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -670,5 +683,7 @@
         private System.Windows.Forms.Button uiNatrag;
         private System.Windows.Forms.Button uiIzvoz;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Drawing.Printing.PrintDocument printDocument1;
     }
 }
