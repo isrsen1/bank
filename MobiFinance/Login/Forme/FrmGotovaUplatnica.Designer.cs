@@ -620,6 +620,7 @@
             this.Name = "FrmGotovaUplatnica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGotovaUplatnica";
+            this.Load += new System.EventHandler(this.FrmGotovaUplatnica_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiGeneriraniBarcode)).EndInit();

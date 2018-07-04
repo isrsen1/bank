@@ -39,7 +39,20 @@ namespace MobiFinance.Forme
             ZatvoriFormu();
         }
         public void NapuniTablicu() {
-            
+            Platitelj = Environment.NewLine+Klijent.Ime + " " + Klijent.Prezime + Environment.NewLine + Klijent.Adresa;
+            uiPlatiteljPodaci.Text =Platitelj.ToUpper();
+            Primatelj = Environment.NewLine + Environment.NewLine + "Zagrebačka banka d.d" + Environment.NewLine + "Trg bana Josipa Jelačića 10" + Environment.NewLine + "10000 Zagreb";
+            uiPrimateljPodaci.Text = Primatelj.ToUpper();
+            uiValutaPlacanja.Text = "HRK";
+            uiIznosRacuna.TextAlign = HorizontalAlignment.Right;
+            KamatnaStopa = Kredit.IzracunajRekurzivnuKamatnuStopu();
+            uiIznosRacuna.Text = "=" + Kredit.IzracunajAnuitet(KamatnaStopa);
+
+        }
+
+        private void FrmGotovaUplatnica_Load(object sender, EventArgs e)
+        {
+            NapuniTablicu();
         }
     }
 }
