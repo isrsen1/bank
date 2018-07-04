@@ -38,5 +38,8 @@ namespace MobiFinance.Forme
         {
             ZatvoriFormu();
         }
+        public void NapuniTablicu() {
+            
+        }
     }
 }
