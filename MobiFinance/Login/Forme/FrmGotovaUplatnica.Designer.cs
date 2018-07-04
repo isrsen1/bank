@@ -43,11 +43,11 @@
             this.label11 = new System.Windows.Forms.Label();
             this.uiDatumIzvrsenja = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.uiSifraNamjene = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.uiIBANPrimatelja = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.uiModelPlacanja = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.uiPozivNaBrojPlatitelja = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -104,11 +104,11 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.uiDatumIzvrsenja);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.textBox10);
+            this.groupBox1.Controls.Add(this.uiSifraNamjene);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.uiIBANPrimatelja);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.textBox8);
+            this.groupBox1.Controls.Add(this.uiModelPlacanja);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.uiPozivNaBrojPlatitelja);
             this.groupBox1.Controls.Add(this.label6);
@@ -247,12 +247,12 @@
             this.label10.TabIndex = 21;
             this.label10.Text = "Datum izvršenja";
             // 
-            // textBox10
+            // uiSifraNamjene
             // 
-            this.textBox10.Location = new System.Drawing.Point(197, 180);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(61, 20);
-            this.textBox10.TabIndex = 20;
+            this.uiSifraNamjene.Location = new System.Drawing.Point(197, 180);
+            this.uiSifraNamjene.Name = "uiSifraNamjene";
+            this.uiSifraNamjene.Size = new System.Drawing.Size(61, 20);
+            this.uiSifraNamjene.TabIndex = 20;
             // 
             // label9
             // 
@@ -279,12 +279,12 @@
             this.label8.TabIndex = 17;
             this.label8.Text = "IBAN ili broj računa primatelja";
             // 
-            // textBox8
+            // uiModelPlacanja
             // 
-            this.textBox8.Location = new System.Drawing.Point(197, 141);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(61, 20);
-            this.textBox8.TabIndex = 16;
+            this.uiModelPlacanja.Location = new System.Drawing.Point(197, 141);
+            this.uiModelPlacanja.Name = "uiModelPlacanja";
+            this.uiModelPlacanja.Size = new System.Drawing.Size(61, 20);
+            this.uiModelPlacanja.TabIndex = 16;
             // 
             // label7
             // 
@@ -451,9 +451,9 @@
             this.label21.ForeColor = System.Drawing.Color.Red;
             this.label21.Location = new System.Drawing.Point(12, 49);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(109, 13);
+            this.label21.Size = new System.Drawing.Size(154, 13);
             this.label21.TabIndex = 39;
-            this.label21.Text = "IBAN (račun) platitelja";
+            this.label21.Text = "IBAN (račun) platitelja ili Platitelj";
             // 
             // label20
             // 
@@ -584,6 +584,7 @@
             this.uiIzvoz.TabIndex = 4;
             this.uiIzvoz.Text = "Izvoz";
             this.uiIzvoz.UseVisualStyleBackColor = true;
+            this.uiIzvoz.Click += new System.EventHandler(this.uiIzvoz_Click);
             // 
             // label23
             // 
@@ -605,6 +606,10 @@
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
             // FrmGotovaUplatnica
             // 
@@ -647,11 +652,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox uiDatumIzvrsenja;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox uiSifraNamjene;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox uiIBANPrimatelja;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox uiModelPlacanja;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox uiPozivNaBrojPlatitelja;
         private System.Windows.Forms.Label label6;
