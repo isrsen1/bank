@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MobiFinance;
 using Login;
-
+using KeepAutomation.Barcode.Bean;
+using KeepAutomation.Barcode.Windows;
+using KeepAutomation;
+using System.Drawing.Imaging;
+using KeepAutomation.Barcode;
 
 namespace MobiFinance.Forme
 {
@@ -72,12 +76,38 @@ namespace MobiFinance.Forme
             }
 
         }
-
+       
         public void GenerirajBarcode(string kod) {
             //Zen.Barcode.CodePdf417BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodePdf417;
+            BarCode pdf417 = new BarCode();
+            pdf417.Symbology = KeepAutomation.Barcode.Symbology.PDF417;
+            pdf417.PDF417RowCount = 6;
+            pdf417.PDF417ColumnCount = 6;
+            pdf417.CodeToEncode = "PDF417PDF417PDF2342";
+            pdf417.PDF417DataMode = KeepAutomation.Barcode.PDF417DataMode.Auto;
+            pdf417.BarcodeUnit = KeepAutomation.Barcode.BarcodeUnit.Pixel;
+            pdf417.DPI = 72;
+            pdf417.X = 1.9f;
+            pdf417.Y = 113;
+            pdf417.BarCodeHeight = 70;
+            pdf417.BarCodeWidth = 160;
+            pdf417.PDF417XtoYRatio =0.3f;
+            pdf417.LeftMargin = 6;
+            pdf417.RightMargin = 6;
+            pdf417.TopMargin = 6;
+            pdf417.BottomMargin = 6;
+            pdf417.Orientation = KeepAutomation.Barcode.Orientation.Degree0;
+            pdf417.ImageFormat = ImageFormat.Png;
+            pdf417.PDF417ECL = PDF417ECL.ECL_1;
+            Bitmap barcodeInBitmap = pdf417.generateBarcodeToBitmap();
+            uiGeneriraniBarcode.Image = barcodeInBitmap;
 
 
-          //  uiGeneriraniBarcode.Image =;
+
+
+
+
+
         }
 
 
