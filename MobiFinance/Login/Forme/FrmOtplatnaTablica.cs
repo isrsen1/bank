@@ -25,6 +25,8 @@ namespace Login.Forme
         {
             InitializeComponent();
         }
+
+        //Metoda za dohvaćanje i prikaz kredita iz baze podataka
         public void PrikaziKredite() {
             kreditBindingSource.DataSource = null;
             PohranaKredita = new BindingList<Kredit_>();
@@ -32,7 +34,7 @@ namespace Login.Forme
             kreditBindingSource.DataSource = PohranaKredita;
         }
 
-
+        //Prilikom učitavanja prikazuju se krediti te se prema odabranome kreditu izrađuje otplatna tablica
         private void FrmOtplatnaTablica_Load(object sender, EventArgs e)
         {
             PrikaziKredite();
@@ -51,6 +53,8 @@ namespace Login.Forme
             }
         }
 
+
+        //metoda za dohvaćanje podataka otplatne tablice
         public void NapuniDataGridView(Kredit_ kredit)
         {
             try
@@ -66,6 +70,8 @@ namespace Login.Forme
             }
         }
 
+
+        //metoda u kojoj se računaju podaci za samu otplatnu tablicu 
         public void IzracunajOtplatnuTablicu(double r,double anuitet,Kredit_ pom) {
 
             double ostatakDuga = 0;
@@ -86,12 +92,14 @@ namespace Login.Forme
 
         }
 
+        //metoda koja dodaje izvor BindingSourcu za prikaz izračunate otplatne tablice
         public void OsvjeziEkran(Kredit_ odabraniKredit) {
             otplatnatablicaBindingSource.DataSource = null;
             ListaOtplate = new BindingList<Otplatna_tablica>(odabraniKredit.KolekcijaZapisa);
             otplatnatablicaBindingSource.DataSource = ListaOtplate;
         }
 
+        // metoda koja služi za ispis otplatne tablice
         public void Printanje(DGVPrinter printer) {
             printer.Title = "Otplatna tablica ";
             printer.SubTitle = string.Format("{0}", DateTime.Now.Date);
@@ -106,6 +114,7 @@ namespace Login.Forme
             printer.PrintDataGridView(dgvOtplatnaTablica);
         }
 
+        //metoda koja reagira na promjenu comboboxa te prema odabranome kreditu izračunava otplatnu tablicu
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
             odabraniKredit = cbPopisKredita.SelectedItem as Kredit_;
@@ -125,12 +134,17 @@ namespace Login.Forme
 
         private void btnPrintanje_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Želite li ispisati izračunatu otplatnu tablicu?", "Potvrda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                Printanje(printanjeTablice);
-            }
-            catch (Exception ) {
-                MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                try
+                {
+                    Printanje(printanjeTablice);
+                    MessageBox.Show("Naredba je izvršena","Poruka uspjeha",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         public void ZatvoriFormu() {
