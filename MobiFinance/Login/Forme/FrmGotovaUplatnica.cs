@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MobiFinance;
 using Login;
 
+
 namespace MobiFinance.Forme
 {
     public partial class FrmGotovaUplatnica : Form
@@ -73,8 +74,8 @@ namespace MobiFinance.Forme
         }
 
         public void GenerirajBarcode(string kod) {
-            Zen.Barcode.Code93BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.Code93WithChecksum;
-            uiGeneriraniBarcode.Image = qrcode.Draw(kod, 70);
+            Zen.Barcode.CodePdf417BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodePdf417;
+            uiGeneriraniBarcode.Image = qrcode.Draw(kod, 40);
         }
 
 
