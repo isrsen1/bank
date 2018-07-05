@@ -20,13 +20,16 @@ namespace Login.Forme
         public double RekurzivnaKamatnaStopa = 0;
         private double anuitet = 0;
         private Kredit_ odabraniKredit;
+        public BindingList<Kredit_> PohranaKredita = null;
         public FrmOtplatnaTablica()
         {
             InitializeComponent();
         }
         public void PrikaziKredite() {
             kreditBindingSource.DataSource = null;
-            kreditBindingSource.DataSource = krediti.DohvatiKredite();
+            PohranaKredita = new BindingList<Kredit_>();
+            PohranaKredita = krediti.DohvatiKredite();
+            kreditBindingSource.DataSource = PohranaKredita;
         }
 
 
