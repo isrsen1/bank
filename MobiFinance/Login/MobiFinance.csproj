@@ -44,6 +44,18 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="KeepAutomation.Barcode.Crystal">
+      <HintPath>..\..\dll-ovi barcode\KeepAutomation.Barcode.Crystal.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.RDLC">
+      <HintPath>..\..\dll-ovi barcode\KeepAutomation.Barcode.RDLC.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Web">
+      <HintPath>..\..\dll-ovi barcode\KeepAutomation.Barcode.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="KeepAutomation.Barcode.Windows">
+      <HintPath>..\..\dll-ovi barcode\KeepAutomation.Barcode.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />

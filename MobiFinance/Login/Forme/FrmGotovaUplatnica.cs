@@ -74,8 +74,10 @@ namespace MobiFinance.Forme
         }
 
         public void GenerirajBarcode(string kod) {
-            Zen.Barcode.CodePdf417BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodePdf417;
-            uiGeneriraniBarcode.Image = qrcode.Draw(kod, 40);
+            //Zen.Barcode.CodePdf417BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodePdf417;
+
+
+          //  uiGeneriraniBarcode.Image =;
         }
 
 
