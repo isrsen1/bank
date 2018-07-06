@@ -25,16 +25,22 @@ namespace Login.Forme
         {
             InitializeComponent();
         }
-
-        //Metoda za dohvaćanje i prikaz kredita iz baze podataka
+        /// <summary>
+        /// Metoda za dohvaćanje i prikaz kredita iz baze podataka
+        /// </summary>
+     
         public void PrikaziKredite() {
             kreditBindingSource.DataSource = null;
             PohranaKredita = new BindingList<Kredit_>();
             PohranaKredita = krediti.DohvatiKredite();
             kreditBindingSource.DataSource = PohranaKredita;
         }
+        /// <summary>
+        /// Prilikom učitavanja prikazuju se krediti te se prema odabranome kreditu izrađuje otplatna tablica
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
-        //Prilikom učitavanja prikazuju se krediti te se prema odabranome kreditu izrađuje otplatna tablica
         private void FrmOtplatnaTablica_Load(object sender, EventArgs e)
         {
             PrikaziKredite();
@@ -53,8 +59,11 @@ namespace Login.Forme
             }
         }
 
+        /// <summary>
+        /// metoda za dohvaćanje podataka otplatne tablice
+        /// </summary>
+        /// <param name="kredit"></param>
 
-        //metoda za dohvaćanje podataka otplatne tablice
         public void NapuniDataGridView(Kredit_ kredit)
         {
             try
@@ -70,8 +79,13 @@ namespace Login.Forme
             }
         }
 
+        /// <summary>
+        ///  metoda u kojoj se računaju podaci za samu otplatnu tablicu 
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="anuitet"></param>
+        /// <param name="pom"></param>
 
-        //metoda u kojoj se računaju podaci za samu otplatnu tablicu 
         public void IzracunajOtplatnuTablicu(double r,double anuitet,Kredit_ pom) {
 
             double ostatakDuga = 0;
@@ -91,15 +105,21 @@ namespace Login.Forme
             }
 
         }
+        /// <summary>
+        /// metoda koja dodaje izvor BindingSourcu za prikaz izračunate otplatne tablice
+        /// </summary>
+        /// <param name="odabraniKredit"></param>
 
-        //metoda koja dodaje izvor BindingSourcu za prikaz izračunate otplatne tablice
         public void OsvjeziEkran(Kredit_ odabraniKredit) {
             otplatnatablicaBindingSource.DataSource = null;
             ListaOtplate = new BindingList<Otplatna_tablica>(odabraniKredit.KolekcijaZapisa);
             otplatnatablicaBindingSource.DataSource = ListaOtplate;
         }
+        /// <summary>
+        ///   metoda koja služi za ispis otplatne tablice
+        /// </summary>
+        /// <param name="printer"></param>
 
-        // metoda koja služi za ispis otplatne tablice
         public void Printanje(DGVPrinter printer) {
             printer.Title = "Otplatna tablica ";
             printer.SubTitle = string.Format("{0}", DateTime.Now.Date);
@@ -113,7 +133,11 @@ namespace Login.Forme
             printer.FooterSpacing = 15;
             printer.PrintDataGridView(dgvOtplatnaTablica);
         }
-
+        /// <summary>
+        /// metoda koja reagira na promjenu comboboxa te prema odabranome kreditu izračunava otplatnu tablicu
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         //metoda koja reagira na promjenu comboboxa te prema odabranome kreditu izračunava otplatnu tablicu
         private void cbPopisKredita_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -134,8 +158,7 @@ namespace Login.Forme
 
         private void btnPrintanje_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Želite li ispisati izračunatu otplatnu tablicu?", "Potvrda", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
+           
                 try
                 {
                     Printanje(printanjeTablice);
@@ -145,7 +168,7 @@ namespace Login.Forme
                 {
                     MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+            
         }
         public void ZatvoriFormu() {
             this.Close();

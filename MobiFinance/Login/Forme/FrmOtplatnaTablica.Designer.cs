@@ -58,9 +58,9 @@
             this.cbPopisKredita.DataSource = this.kreditBindingSource;
             this.cbPopisKredita.DisplayMember = "NazivKredita";
             this.cbPopisKredita.FormattingEnabled = true;
-            this.cbPopisKredita.Location = new System.Drawing.Point(87, 180);
+            this.cbPopisKredita.Location = new System.Drawing.Point(87, 164);
             this.cbPopisKredita.Name = "cbPopisKredita";
-            this.cbPopisKredita.Size = new System.Drawing.Size(319, 21);
+            this.cbPopisKredita.Size = new System.Drawing.Size(646, 21);
             this.cbPopisKredita.TabIndex = 0;
             this.cbPopisKredita.ValueMember = "Id";
             this.cbPopisKredita.SelectedIndexChanged += new System.EventHandler(this.cbPopisKredita_SelectedIndexChanged);
@@ -105,7 +105,7 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -199,9 +199,9 @@
             // btnVratiNazad
             // 
             this.btnVratiNazad.Image = global::MobiFinance.Properties.Resources.back1;
-            this.btnVratiNazad.Location = new System.Drawing.Point(13, 113);
+            this.btnVratiNazad.Location = new System.Drawing.Point(2, 89);
             this.btnVratiNazad.Name = "btnVratiNazad";
-            this.btnVratiNazad.Size = new System.Drawing.Size(105, 61);
+            this.btnVratiNazad.Size = new System.Drawing.Size(105, 28);
             this.btnVratiNazad.TabIndex = 3;
             this.btnVratiNazad.UseVisualStyleBackColor = true;
             this.btnVratiNazad.Click += new System.EventHandler(this.btnVratiNazad_Click);
