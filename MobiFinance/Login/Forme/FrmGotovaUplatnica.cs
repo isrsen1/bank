@@ -83,21 +83,23 @@ namespace MobiFinance.Forme
            
             BarCode pdf417 = new BarCode();
             pdf417.Symbology = KeepAutomation.Barcode.Symbology.PDF417;
-            pdf417.PDF417RowCount = 1;
-            pdf417.PDF417ColumnCount = 1;
+            pdf417.PDF417RowCount = 3;
+            pdf417.PDF417ColumnCount = 5;
             
             pdf417.CodeToEncode = kod;
-            pdf417.DataMatrixDataMode = DataMatrixDataMode.ASCII;
+            
             pdf417.PDF417DataMode = PDF417DataMode.Auto;
             pdf417.BarcodeUnit = KeepAutomation.Barcode.BarcodeUnit.Pixel;
-            pdf417.DPI = 72;
-            pdf417.X = 2;
-            pdf417.Y = 113;
-            pdf417.BarCodeWidth =20;
-            pdf417.BarCodeHeight = 80;
-            pdf417.PDF417XtoYRatio =0.3f;
-            pdf417.LeftMargin = 6;
-            pdf417.RightMargin = 6;
+          //  pdf417.DPI = 100;
+            pdf417.X = 1.9f;
+            pdf417.Y = pdf417.X / 0.3f;
+            //pdf417.Y = 2;
+            pdf417.BarCodeWidth =44;
+            pdf417.BarCodeHeight = 20;
+            pdf417.PDF417XtoYRatio =0.2f;
+            pdf417.LeftMargin =12;
+            
+            pdf417.RightMargin = 12;
             pdf417.TopMargin = 6;
             pdf417.BottomMargin = 6;
             pdf417.Orientation = KeepAutomation.Barcode.Orientation.Degree0;
