@@ -59,5 +59,32 @@ namespace Login
             }
             return lista;
         }
+
+        public string GenerirajPodatkeZaBarKod(string cijena) {
+            string kod = "";
+           
+            kod += "HRVHUB30";
+            kod += Environment.NewLine+"HRK";
+            kod += Environment.NewLine+cijena+Environment.NewLine;
+            kod += this.Ime+" "  + this.Prezime+Environment.NewLine;
+            kod +=this.Adresa;
+            kod += Environment.NewLine+Environment.NewLine+ "Zagrebacka banka d.d" + Environment.NewLine + "Trg bana Josipa Jelacica 10 10000 Zagreb";
+            kod +=Environment.NewLine+ "HR01"+Environment.NewLine+"OTLC"+Environment.NewLine+ "20556629-4";
+            kod += Environment.NewLine + "Ukupan iznos za kreditnu ratu";
+            return kod;
+        }
+        public string UrediCijenu(double anuitet)
+        {
+            string novacijena = "";
+            string cijena = ((anuitet).ToString()).Replace(",", "");
+            for (int i = 0; i < 15-cijena.Length; i++)
+            {
+                novacijena += "0";
+            }
+            novacijena += cijena;
+            return novacijena;
+
+        }
+
     }
 }

@@ -104,5 +104,7 @@ namespace Login
             double ostatakDuga = Math.Round(ostatak-kvota,2);
             return ostatakDuga;
         }
+
+        
     }
 }

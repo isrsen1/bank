@@ -65,7 +65,9 @@ namespace MobiFinance.Forme
             uiOpisPlacanjaDesno.Text= Environment.NewLine + Opis +Environment.NewLine+ "Iznos računa: " + Kredit.IzracunajAnuitet(KamatnaStopa) + " kn";
             uiValutaIIznos.TextAlign = HorizontalAlignment.Right;
             uiValutaIIznos.Text = "HRK="+Kredit.IzracunajAnuitet(KamatnaStopa);
-            KodZaBarcode = Klijent.OIB + "BARCODE";
+            string novaCijena = Klijent.UrediCijenu(Kredit.IzracunajAnuitet(KamatnaStopa));
+
+            KodZaBarcode = Klijent.GenerirajPodatkeZaBarKod(novaCijena);
             try
             {
                 GenerirajBarcode(KodZaBarcode);
@@ -78,19 +80,21 @@ namespace MobiFinance.Forme
         }
        
         public void GenerirajBarcode(string kod) {
-            //Zen.Barcode.CodePdf417BarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodePdf417;
+           
             BarCode pdf417 = new BarCode();
             pdf417.Symbology = KeepAutomation.Barcode.Symbology.PDF417;
-            pdf417.PDF417RowCount = 6;
-            pdf417.PDF417ColumnCount = 6;
-            pdf417.CodeToEncode = "PDF417PDF417PDF2342";
-            pdf417.PDF417DataMode = KeepAutomation.Barcode.PDF417DataMode.Auto;
+            pdf417.PDF417RowCount = 1;
+            pdf417.PDF417ColumnCount = 1;
+            
+            pdf417.CodeToEncode = kod;
+            pdf417.DataMatrixDataMode = DataMatrixDataMode.ASCII;
+            pdf417.PDF417DataMode = PDF417DataMode.Auto;
             pdf417.BarcodeUnit = KeepAutomation.Barcode.BarcodeUnit.Pixel;
             pdf417.DPI = 72;
-            pdf417.X = 1.9f;
+            pdf417.X = 2;
             pdf417.Y = 113;
-            pdf417.BarCodeHeight = 70;
-            pdf417.BarCodeWidth = 160;
+            pdf417.BarCodeWidth =20;
+            pdf417.BarCodeHeight = 80;
             pdf417.PDF417XtoYRatio =0.3f;
             pdf417.LeftMargin = 6;
             pdf417.RightMargin = 6;
@@ -100,7 +104,7 @@ namespace MobiFinance.Forme
             pdf417.ImageFormat = ImageFormat.Png;
             pdf417.PDF417ECL = PDF417ECL.ECL_1;
             Bitmap barcodeInBitmap = pdf417.generateBarcodeToBitmap();
-            uiGeneriraniBarcode.Image = barcodeInBitmap;
+            uiGeneriraniBarcode.Image = barcodeInBitmap ;
 
 
 
