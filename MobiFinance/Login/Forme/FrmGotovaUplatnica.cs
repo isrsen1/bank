@@ -46,6 +46,7 @@ namespace MobiFinance.Forme
             ZatvoriFormu();
         }
         public void NapuniTablicu() {
+            
             Platitelj = Environment.NewLine+Klijent.Ime + " " + Klijent.Prezime + Environment.NewLine + Klijent.Adresa;
             uiPlatiteljPodaci.Text =Platitelj.ToUpper();
             Primatelj = Environment.NewLine + Environment.NewLine + "Zagrebačka banka d.d" + Environment.NewLine + "Trg bana Josipa Jelačića 10" + Environment.NewLine + "10000 Zagreb";
@@ -54,19 +55,21 @@ namespace MobiFinance.Forme
             uiValutaPlacanja.Text = "HRK";
             uiIznosRacuna.TextAlign = HorizontalAlignment.Right;
             KamatnaStopa = Kredit.IzracunajRekurzivnuKamatnuStopu();
-            uiIznosRacuna.Text = "=" + Kredit.IzracunajAnuitet(KamatnaStopa);
+            double anuitet = Kredit.IzracunajAnuitet(KamatnaStopa);
+            uiIznosRacuna.Text = "=" + anuitet;
+            
             uiIBANPrimatelja.Text = "HR4523400091510186599";
             uiModelPlacanja.Text = "HR01";
             uiSifraNamjene.Text ="OTLC";
             uiPozivNaBrojPrimatelja.Text = "20556629-4";
-            uiOpisPlacanja.Text = "Ukupan iznos za kreditnu ratu" + Environment.NewLine + "Iznos računa: " + Kredit.IzracunajAnuitet(KamatnaStopa) + " kn" + Environment.NewLine + "Dospijece racuna : " + Kredit.DatumPocetka.Value.AddMonths(1).ToString("d");
+            uiOpisPlacanja.Text = "Ukupan iznos za kreditnu ratu" + Environment.NewLine + "Iznos računa: " + anuitet + " kn" + Environment.NewLine + "Dospijece racuna : " + Kredit.DatumPocetka.Value.AddMonths(1).ToString("d");
             Opis = "Ukupan iznos za kreditnu ratu";
             uiRacunPlatitelja.Text = Environment.NewLine + Klijent.Ime.ToUpper() + " " + Klijent.Prezime.ToUpper();
-            uiOpisPlacanjaDesno.Text= Environment.NewLine + Opis +Environment.NewLine+ "Iznos računa: " + Kredit.IzracunajAnuitet(KamatnaStopa) + " kn";
+            uiOpisPlacanjaDesno.Text= Environment.NewLine + Opis +Environment.NewLine+ "Iznos računa: " + anuitet + " kn";
             uiValutaIIznos.TextAlign = HorizontalAlignment.Right;
-            uiValutaIIznos.Text = "HRK="+Kredit.IzracunajAnuitet(KamatnaStopa);
+            uiValutaIIznos.Text = "HRK="+anuitet;
             string novaCijena = Klijent.UrediCijenu(Kredit.IzracunajAnuitet(KamatnaStopa));
-
+            
             KodZaBarcode = Klijent.GenerirajPodatkeZaBarKod(novaCijena);
             try
             {

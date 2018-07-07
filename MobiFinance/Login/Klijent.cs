@@ -76,7 +76,7 @@ namespace Login
         public string UrediCijenu(double anuitet)
         {
             string novacijena = "";
-            string cijena = ((anuitet).ToString()).Replace(",", "");
+            string cijena = ((anuitet).ToString()).Replace(".", "");
             for (int i = 0; i < 15-cijena.Length; i++)
             {
                 novacijena += "0";

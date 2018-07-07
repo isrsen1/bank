@@ -19,6 +19,8 @@ namespace MobiFinance.Forme
         private Kredit_ odabraniKredit = null;
         public Klijent Klijent = new Klijent();
         public Kredit_ Kredit = new Kredit_();
+        public BindingList<Klijent> ListaKorisnika;
+        public BindingList<Kredit_> ListaKreditaKorsinika;
         public FrmKreditiKorisnika()
         {
             InitializeComponent();
@@ -27,12 +29,16 @@ namespace MobiFinance.Forme
         public void PrikaziKorisnike()
         {
             klijentBindingSource.DataSource = null;
+            ListaKorisnika = new BindingList<Klijent>();
+            ListaKorisnika = Klijent.DohvatiKorisnike();
             klijentBindingSource.DataSource = Klijent.DohvatiKorisnike();
         }
 
         public void PrikaziKrediteOdabranogKorisnika(Klijent k) {
             kreditBindingSource.DataSource = null;
-            kreditBindingSource.DataSource = Kredit.DohvatiKrediteKorisnika(k);
+            ListaKreditaKorsinika = new BindingList<Kredit_>();
+            ListaKreditaKorsinika = Kredit.DohvatiKrediteKorisnika(k);
+            kreditBindingSource.DataSource = ListaKreditaKorsinika;
         }
         private void FrmKreditiKorisnika_Load(object sender, EventArgs e)
         {
