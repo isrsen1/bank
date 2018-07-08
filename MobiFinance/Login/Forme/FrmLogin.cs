@@ -19,6 +19,11 @@ namespace Login.Forme
             InitializeComponent();
         }
 
+        /// <summary>
+        /// metoda za provjeravanje korsiničkog unosa
+        /// </summary>
+        /// <returns></returns>
+
         public bool ProvjeriUnos() {
             if (txtUser.Text == "admin123" && txtLozinka.Text == "nozuledja123")
             {
@@ -26,7 +31,11 @@ namespace Login.Forme
             }
             else return false;
         }
-
+        /// <summary>
+        /// metoda pomoću koje se na pritisak gumba prijavimo
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnPrijaviSe_Click(object sender, EventArgs e)
         {
             if (ProvjeriUnos() == true)
@@ -46,6 +55,16 @@ namespace Login.Forme
             }
            
            
+        }
+
+        /// <summary>
+        /// izlazak iz forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnOdustani_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
