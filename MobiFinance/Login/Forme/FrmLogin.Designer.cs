@@ -30,10 +30,11 @@
         {
             this.lblKorIme = new System.Windows.Forms.Label();
             this.lblLozinka = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
             this.btnPrijaviSe = new System.Windows.Forms.Button();
             this.btnOdustani = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblKorIme
@@ -43,7 +44,7 @@
             this.lblKorIme.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.lblKorIme.Location = new System.Drawing.Point(142, 178);
             this.lblKorIme.Name = "lblKorIme";
-            this.lblKorIme.Size = new System.Drawing.Size(172, 29);
+            this.lblKorIme.Size = new System.Drawing.Size(133, 24);
             this.lblKorIme.TabIndex = 2;
             this.lblKorIme.Text = "Korisničko ime";
             // 
@@ -53,25 +54,26 @@
             this.lblLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLozinka.Location = new System.Drawing.Point(142, 224);
             this.lblLozinka.Name = "lblLozinka";
-            this.lblLozinka.Size = new System.Drawing.Size(95, 29);
+            this.lblLozinka.Size = new System.Drawing.Size(74, 24);
             this.lblLozinka.TabIndex = 3;
             this.lblLozinka.Text = "Lozinka";
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(401, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(293, 28);
-            this.textBox1.TabIndex = 4;
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(401, 178);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(293, 24);
+            this.txtUser.TabIndex = 4;
             // 
-            // textBox2
+            // txtLozinka
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(401, 224);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(293, 28);
-            this.textBox2.TabIndex = 5;
+            this.txtLozinka.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLozinka.Location = new System.Drawing.Point(401, 224);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.PasswordChar = '*';
+            this.txtLozinka.Size = new System.Drawing.Size(293, 24);
+            this.txtLozinka.TabIndex = 5;
             // 
             // btnPrijaviSe
             // 
@@ -94,24 +96,36 @@
             this.btnOdustani.Text = "Odustani";
             this.btnOdustani.UseVisualStyleBackColor = true;
             // 
-            // Login
+            // label1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.DarkRed;
+            this.label1.Location = new System.Drawing.Point(401, 266);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 13);
+            this.label1.TabIndex = 8;
+            // 
+            // FrmLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1079, 474);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOdustani);
             this.Controls.Add(this.btnPrijaviSe);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLozinka);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorIme);
-            this.Name = "Login";
+            this.Name = "FrmLogin";
             this.Controls.SetChildIndex(this.lblKorIme, 0);
             this.Controls.SetChildIndex(this.lblLozinka, 0);
-            this.Controls.SetChildIndex(this.textBox1, 0);
-            this.Controls.SetChildIndex(this.textBox2, 0);
+            this.Controls.SetChildIndex(this.txtUser, 0);
+            this.Controls.SetChildIndex(this.txtLozinka, 0);
             this.Controls.SetChildIndex(this.btnPrijaviSe, 0);
             this.Controls.SetChildIndex(this.btnOdustani, 0);
+            this.Controls.SetChildIndex(this.label1, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -121,9 +135,10 @@
 
         private System.Windows.Forms.Label lblKorIme;
         private System.Windows.Forms.Label lblLozinka;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox txtLozinka;
         private System.Windows.Forms.Button btnPrijaviSe;
         private System.Windows.Forms.Button btnOdustani;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -29,6 +29,7 @@ namespace Login
         public string BrojTelefona { get; set; }
         public string KorisnickoIme { get; set; }
         public Nullable<int> Tip_id { get; set; }
+        public static Zaposlenik PrijavljeniKorisnik;
         public string Lozinka { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -36,5 +37,17 @@ namespace Login
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stednja> Stednjas { get; set; }
         public virtual Tip_zaposlenika Tip_zaposlenika { get; set; }
+
+        public Zaposlenik(int _id,string _ime,string _prezime,string _email,string _adresa,string _brojTelefona,string _korisnickoIme,int _tipId,string _lozinka) {
+            Id = _id;
+            Ime = _ime;
+            Prezime = _prezime;
+            Email = _email;
+            Adresa = _adresa;
+            BrojTelefona = _brojTelefona;
+            KorisnickoIme = _korisnickoIme;
+            Tip_id = _tipId;
+            Lozinka = _lozinka;
+        }
     }
 }

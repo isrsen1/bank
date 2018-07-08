@@ -56,6 +56,7 @@ namespace Login.Forme
         {
             if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
+                Zaposlenik.PrijavljeniKorisnik = null;
                 FrmLogin login = new FrmLogin();
                 login.ShowDialog();
                 this.Close();
