@@ -37,14 +37,24 @@ namespace MobiFinance.Forme
             Kredit = _kredit;
             Klijent = _klijent;
         }
+        /// <summary>
+        /// metoda za zatvaranje aktualne forme
+        /// </summary>
         public void ZatvoriFormu() {
             this.Close();
         }
-
+        /// <summary>
+        /// Upravitelj događaja za zatvaranje forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiNatrag_Click(object sender, EventArgs e)
         {
             ZatvoriFormu();
         }
+        /// <summary>
+        /// metoda za ispunjavanje uplatnice podacima
+        /// </summary>
         public void NapuniTablicu() {
             
             Platitelj = Environment.NewLine+Klijent.Ime + " " + Klijent.Prezime + Environment.NewLine + Klijent.Adresa;
@@ -82,6 +92,11 @@ namespace MobiFinance.Forme
 
         }
        
+
+        /// <summary>
+        /// metoda koja služi za generiranje barkoda prema proslijeđenome kodu/stringu
+        /// </summary>
+        /// <param name="kod"></param>
         public void GenerirajBarcode(string kod) {
            
             BarCode pdf417 = new BarCode();
@@ -120,12 +135,19 @@ namespace MobiFinance.Forme
         }
 
 
-
+        /// <summary>
+        /// Popunjavanje uplatnice na učitavanje forme
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmGotovaUplatnica_Load(object sender, EventArgs e)
         {
             NapuniTablicu();
         }
 
+        /// <summary>
+        /// metoda koja preslikava aktualno otvorenu formu u printviewdialog().
+        /// </summary>
         public void PrikazDokumenta() {
             Graphics g = this.CreateGraphics();
             Slika = new Bitmap(this.Size.Width, this.Size.Height, g);
@@ -134,6 +156,12 @@ namespace MobiFinance.Forme
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
             printPreviewDialog1.ShowDialog();
         }
+
+        /// <summary>
+        /// metoda koja služi za pozivanje metode za prikaz forme u printviewDialogu()
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiIzvoz_Click(object sender, EventArgs e)
         {
             uiNatrag.Visible = false;
@@ -143,7 +171,11 @@ namespace MobiFinance.Forme
             uiIzvoz.Visible = true;
         }
 
-       
+       /// <summary>
+       /// Ispis forme u pdf
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="e"></param>
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             printDocument1.DefaultPageSettings.Landscape = true;
