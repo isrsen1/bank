@@ -56,8 +56,12 @@ namespace Login
             }
             return lista;
         }
-
-        //Metoda za dohvaćanje kredita za oadbranog korisnika
+        /// <summary>
+        /// Metoda za dohvaćanje kredita za oadbranog korisnika
+        /// </summary>
+        /// <param name="klijent"></param>
+        /// <returns></returns>
+        
         public BindingList<Kredit_> DohvatiKrediteKorisnika(Klijent klijent)
         {
 
@@ -70,19 +74,30 @@ namespace Login
             return lista;
         }
 
-        //dodavanje jednog mjeseca otplatne tablice u listu otplatne tablice
+        /// <summary>
+        /// dodavanje jednog mjeseca otplatne tablice u listu otplatne tablice
+        /// </summary>
+        /// <param name="otplata"></param>
+       
         public void DodajZapisUOtplatnu(Otplatna_tablica otplata) {
             KolekcijaZapisa.Add(otplata);
         }
 
-        //metoda za izračunavanje rekurzivne kamatne stope odabranog kredita
+        /// <summary>
+        /// metoda za izračunavanje rekurzivne kamatne stope odabranog kredita
+        /// </summary>
+        /// <returns></returns>
         public double IzracunajRekurzivnuKamatnuStopu() {
             double p = this.KamatnaStopa / 12;
             double pom = 1 + (p / 100);
             return pom;
         }
+        /// <summary>
+        /// metoda za izracunavanje anuiteta kredita, kao parametar prima rekurzvnu kamatnu stopu
+        /// </summary>
+        /// <param name="r"></param>
+        /// <returns></returns>
 
-        //metoda za izracunavanje anuiteta kredita, kao parametar prima rekurzvnu kamatnu stopu
         public double IzracunajAnuitet(double r) {
             double gornjiDio = 0;
             double donjiDio = 0;
@@ -91,19 +106,41 @@ namespace Login
             double anuitet = Glavnica * (gornjiDio / donjiDio);
             return Math.Round(anuitet,2);
         }
-        //metoda za izracunavanje kamate razdoblja odaranog kredita, kao parametar prima ostatak duga kredita i rekurzivnu kamatnu stopu
+        /// <summary>
+        /// metoda za izracunavanje kamate razdoblja odaranog kredita, kao parametar prima ostatak duga kredita i rekurzivnu kamatnu stopu
+        /// </summary>
+        /// <param name="ostatakDuga"></param>
+        /// <param name="r"></param>
+        /// <returns></returns>
+
         public double IzracunajKamatuRazdoblja(double ostatakDuga,double r) {
             return Math.Round(ostatakDuga*(r-1),2);
         }
-        //metoda za izračunavanje otplatne kvote kredita,kao parametre prima anuitet i kamatu razdoblja
+        /// <summary>
+        ///   metoda za izračunavanje otplatne kvote kredita,kao parametre prima anuitet i kamatu razdoblja
+        /// </summary>
+
         public double IzracunajOtplatnuKvotu(double anuitet,double kamataRazdoblja) {
             return Math.Round(anuitet-kamataRazdoblja,3);
         }
-        // metoda za izračunavanje otplaćenog djela duga
+        /// <summary>
+        /// metoda za izračunavanje otplaćenog djela duga
+        /// </summary>
+        /// <param name="dio"></param>
+        /// <param name="kvota"></param>
+        /// <returns></returns>
+        
         public double IzracunajOtplaceniDioDuga(double dio,double kvota) {
             return Math.Round(dio+kvota,2);
         }
-        //metoda za izracunavanje ostatka duga za traženi kredit
+
+        /// <summary>
+        /// metoda za izracunavanje ostatka duga za traženi kredit
+        /// </summary>
+        /// <param name="ostatak"></param>
+        /// <param name="kvota"></param>
+        /// <returns></returns>
+
         public double IzracunajOstatakDUga(double ostatak,double kvota) {
             double ostatakDuga = Math.Round(ostatak-kvota,2);
             return ostatakDuga;
