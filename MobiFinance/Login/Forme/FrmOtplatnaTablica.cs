@@ -162,7 +162,7 @@ namespace Login.Forme
                 try
                 {
                     Printanje(printanjeTablice);
-                    MessageBox.Show("Naredba je izvršena","Poruka uspjeha",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                 
                 }
                 catch (Exception)
                 {
