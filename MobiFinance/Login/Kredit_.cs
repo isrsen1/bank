@@ -43,8 +43,12 @@ namespace Login
         public virtual Zaposlenik Zaposlenik { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Otplatna_tablica> Otplatna_tablica { get; set; }
-
-        //metoda za dohvaćanje svih kredita iz baze podataka
+        
+        /// <summary>
+        ///  metoda za dohvaćanje svih kredita iz baze podataka
+        /// </summary>
+        /// <returns></returns>
+        ///
         public BindingList<Kredit_> DohvatiKredite() {
             BindingList<Kredit_> lista = null;
             using (BankaEntities db= new BankaEntities()) {

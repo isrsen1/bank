@@ -18,10 +18,7 @@ namespace Login.Forme
             InitializeComponent();
         }
 
-        private void Login_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnPrijaviSe_Click(object sender, EventArgs e)
         {

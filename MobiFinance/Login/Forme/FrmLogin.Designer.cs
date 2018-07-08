@@ -106,7 +106,6 @@
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorIme);
             this.Name = "Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.Controls.SetChildIndex(this.lblKorIme, 0);
             this.Controls.SetChildIndex(this.lblLozinka, 0);
             this.Controls.SetChildIndex(this.textBox1, 0);
