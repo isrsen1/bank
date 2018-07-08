@@ -36,6 +36,9 @@
             this.cbPopisKredita = new System.Windows.Forms.ComboBox();
             this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvOtplatnaTablica = new System.Windows.Forms.DataGridView();
+            this.otplatnatablicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPrintanje = new System.Windows.Forms.Button();
+            this.btnVratiNazad = new System.Windows.Forms.Button();
             this.brojMjesecaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kamateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,9 +48,6 @@
             this.otplaceniDioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kreditidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otplatnatablicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnPrintanje = new System.Windows.Forms.Button();
-            this.btnVratiNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otplatnatablicaBindingSource)).BeginInit();
@@ -120,63 +120,6 @@
             this.dgvOtplatnaTablica.Size = new System.Drawing.Size(646, 214);
             this.dgvOtplatnaTablica.TabIndex = 1;
             // 
-            // brojMjesecaDataGridViewTextBoxColumn
-            // 
-            this.brojMjesecaDataGridViewTextBoxColumn.DataPropertyName = "BrojMjeseca";
-            this.brojMjesecaDataGridViewTextBoxColumn.HeaderText = "Broj mjeseca";
-            this.brojMjesecaDataGridViewTextBoxColumn.Name = "brojMjesecaDataGridViewTextBoxColumn";
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // kamateDataGridViewTextBoxColumn
-            // 
-            this.kamateDataGridViewTextBoxColumn.DataPropertyName = "Kamate";
-            this.kamateDataGridViewTextBoxColumn.HeaderText = "Kamate";
-            this.kamateDataGridViewTextBoxColumn.Name = "kamateDataGridViewTextBoxColumn";
-            // 
-            // anuitetDataGridViewTextBoxColumn
-            // 
-            this.anuitetDataGridViewTextBoxColumn.DataPropertyName = "Anuitet";
-            this.anuitetDataGridViewTextBoxColumn.HeaderText = "Anuitet";
-            this.anuitetDataGridViewTextBoxColumn.Name = "anuitetDataGridViewTextBoxColumn";
-            // 
-            // otplatnaKvotaDataGridViewTextBoxColumn
-            // 
-            this.otplatnaKvotaDataGridViewTextBoxColumn.DataPropertyName = "OtplatnaKvota";
-            this.otplatnaKvotaDataGridViewTextBoxColumn.HeaderText = "Otplatna kvota";
-            this.otplatnaKvotaDataGridViewTextBoxColumn.Name = "otplatnaKvotaDataGridViewTextBoxColumn";
-            // 
-            // ostatakDugaDataGridViewTextBoxColumn
-            // 
-            this.ostatakDugaDataGridViewTextBoxColumn.DataPropertyName = "OstatakDuga";
-            this.ostatakDugaDataGridViewTextBoxColumn.HeaderText = "Ostatak duga";
-            this.ostatakDugaDataGridViewTextBoxColumn.Name = "ostatakDugaDataGridViewTextBoxColumn";
-            // 
-            // otplaceniDioDataGridViewTextBoxColumn
-            // 
-            this.otplaceniDioDataGridViewTextBoxColumn.DataPropertyName = "OtplaceniDio";
-            this.otplaceniDioDataGridViewTextBoxColumn.HeaderText = "Otplaceni dio";
-            this.otplaceniDioDataGridViewTextBoxColumn.Name = "otplaceniDioDataGridViewTextBoxColumn";
-            // 
-            // kreditidDataGridViewTextBoxColumn
-            // 
-            this.kreditidDataGridViewTextBoxColumn.DataPropertyName = "Kredit_id";
-            this.kreditidDataGridViewTextBoxColumn.HeaderText = "Kredit_id";
-            this.kreditidDataGridViewTextBoxColumn.Name = "kreditidDataGridViewTextBoxColumn";
-            this.kreditidDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // kreditDataGridViewTextBoxColumn
-            // 
-            this.kreditDataGridViewTextBoxColumn.DataPropertyName = "Kredit_";
-            this.kreditDataGridViewTextBoxColumn.HeaderText = "Kredit_";
-            this.kreditDataGridViewTextBoxColumn.Name = "kreditDataGridViewTextBoxColumn";
-            this.kreditDataGridViewTextBoxColumn.Visible = false;
-            // 
             // otplatnatablicaBindingSource
             // 
             this.otplatnatablicaBindingSource.DataSource = typeof(Login.Otplatna_tablica);
@@ -205,6 +148,63 @@
             this.btnVratiNazad.TabIndex = 3;
             this.btnVratiNazad.UseVisualStyleBackColor = true;
             this.btnVratiNazad.Click += new System.EventHandler(this.btnVratiNazad_Click);
+            // 
+            // brojMjesecaDataGridViewTextBoxColumn
+            // 
+            this.brojMjesecaDataGridViewTextBoxColumn.DataPropertyName = "BrojMjeseca";
+            this.brojMjesecaDataGridViewTextBoxColumn.HeaderText = "Broj mjeseca";
+            this.brojMjesecaDataGridViewTextBoxColumn.Name = "brojMjesecaDataGridViewTextBoxColumn";
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kamateDataGridViewTextBoxColumn
+            // 
+            this.kamateDataGridViewTextBoxColumn.DataPropertyName = "Kamate";
+            this.kamateDataGridViewTextBoxColumn.HeaderText = "Otplata kamate";
+            this.kamateDataGridViewTextBoxColumn.Name = "kamateDataGridViewTextBoxColumn";
+            // 
+            // anuitetDataGridViewTextBoxColumn
+            // 
+            this.anuitetDataGridViewTextBoxColumn.DataPropertyName = "Anuitet";
+            this.anuitetDataGridViewTextBoxColumn.HeaderText = "Iznos Anuiteta";
+            this.anuitetDataGridViewTextBoxColumn.Name = "anuitetDataGridViewTextBoxColumn";
+            // 
+            // otplatnaKvotaDataGridViewTextBoxColumn
+            // 
+            this.otplatnaKvotaDataGridViewTextBoxColumn.DataPropertyName = "OtplatnaKvota";
+            this.otplatnaKvotaDataGridViewTextBoxColumn.HeaderText = "Otplata glavnice u jednakim ratama";
+            this.otplatnaKvotaDataGridViewTextBoxColumn.Name = "otplatnaKvotaDataGridViewTextBoxColumn";
+            // 
+            // ostatakDugaDataGridViewTextBoxColumn
+            // 
+            this.ostatakDugaDataGridViewTextBoxColumn.DataPropertyName = "OstatakDuga";
+            this.ostatakDugaDataGridViewTextBoxColumn.HeaderText = "Stanje Kredita(Ostatak duga)";
+            this.ostatakDugaDataGridViewTextBoxColumn.Name = "ostatakDugaDataGridViewTextBoxColumn";
+            // 
+            // otplaceniDioDataGridViewTextBoxColumn
+            // 
+            this.otplaceniDioDataGridViewTextBoxColumn.DataPropertyName = "OtplaceniDio";
+            this.otplaceniDioDataGridViewTextBoxColumn.HeaderText = "Iznos otplaćenog kredita";
+            this.otplaceniDioDataGridViewTextBoxColumn.Name = "otplaceniDioDataGridViewTextBoxColumn";
+            // 
+            // kreditidDataGridViewTextBoxColumn
+            // 
+            this.kreditidDataGridViewTextBoxColumn.DataPropertyName = "Kredit_id";
+            this.kreditidDataGridViewTextBoxColumn.HeaderText = "Kredit_id";
+            this.kreditidDataGridViewTextBoxColumn.Name = "kreditidDataGridViewTextBoxColumn";
+            this.kreditidDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // kreditDataGridViewTextBoxColumn
+            // 
+            this.kreditDataGridViewTextBoxColumn.DataPropertyName = "Kredit_";
+            this.kreditDataGridViewTextBoxColumn.HeaderText = "Kredit_";
+            this.kreditDataGridViewTextBoxColumn.Name = "kreditDataGridViewTextBoxColumn";
+            this.kreditDataGridViewTextBoxColumn.Visible = false;
             // 
             // FrmOtplatnaTablica
             // 
@@ -235,6 +235,8 @@
         private System.Windows.Forms.DataGridView dgvOtplatnaTablica;
         private System.Windows.Forms.Button btnPrintanje;
         private System.Windows.Forms.BindingSource kreditBindingSource;
+        private System.Windows.Forms.BindingSource otplatnatablicaBindingSource;
+        private System.Windows.Forms.Button btnVratiNazad;
         private System.Windows.Forms.DataGridViewTextBoxColumn brojMjesecaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kamateDataGridViewTextBoxColumn;
@@ -244,7 +246,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn otplaceniDioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kreditidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn kreditDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource otplatnatablicaBindingSource;
-        private System.Windows.Forms.Button btnVratiNazad;
     }
 }
