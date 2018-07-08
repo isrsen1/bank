@@ -122,7 +122,7 @@ namespace Login.Forme
 
         public void Printanje(DGVPrinter printer) {
             printer.Title = "Otplatna tablica ";
-            printer.SubTitle = string.Format("{0}", DateTime.Now.Date);
+            printer.SubTitle = string.Format("{0}", DateTime.Now.Date)+" "+Environment.NewLine+"Tablicu izdao: "+Zaposlenik.PrijavljeniKorisnik.Ime+" "+Zaposlenik.PrijavljeniKorisnik.Prezime;
             printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
 
             printer.PageNumberAlignment = StringAlignment.Far;
