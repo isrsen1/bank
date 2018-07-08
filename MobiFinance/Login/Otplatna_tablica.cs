@@ -24,7 +24,16 @@ namespace Login
         public int BrojMjeseca { get; set; }
     
         public virtual Kredit_ Kredit_ { get; set; }
-
+        /// <summary>
+        /// Konstruktor klase Otplatne tablice
+        /// </summary>
+        /// <param name="_id"></param>
+        /// <param name="_kamate"></param>
+        /// <param name="_anuitet"></param>
+        /// <param name="_otplatnaKvota"></param>
+        /// <param name="_ostatakDuga"></param>
+        /// <param name="_otplaceniDio"></param>
+        /// <param name="_brojMjeseca"></param>
         public Otplatna_tablica(int _id, double _kamate, double _anuitet, double _otplatnaKvota, double _ostatakDuga, double _otplaceniDio, int _brojMjeseca)
         {
             Id = _id;
