@@ -49,6 +49,10 @@ namespace Login
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stednja> Stednjas { get; set; }
 
+        /// <summary>
+        /// Metoda za dohvaćanje svih klijenata iz baze podataka
+        /// </summary>
+        /// <returns></returns>
         public BindingList<Klijent> DohvatiKorisnike()
         {
 
@@ -59,7 +63,11 @@ namespace Login
             }
             return lista;
         }
-
+        /// <summary>
+        /// Metoda za generiranje pdf417 barcoda prema perdlošku
+        /// </summary>
+        /// <param name="cijena"></param>
+        /// <returns></returns>
         public string GenerirajPodatkeZaBarKod(string cijena) {
             string kod = "";
            
@@ -73,6 +81,11 @@ namespace Login
             kod += Environment.NewLine + "Ukupan iznos za kreditnu ratu";
             return kod;
         }
+        /// <summary>
+        /// metoda za uređivanje anuitetea kredta pogodan za 15-znamenkasti zapis
+        /// </summary>
+        /// <param name="anuitet"></param>
+        /// <returns></returns>
         public string UrediCijenu(double anuitet)
         {
             string novacijena = "";

@@ -26,6 +26,9 @@ namespace MobiFinance.Forme
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Metoda za dohvaćanje svih korisnika iz baze podataka
+        /// </summary>
         public void PrikaziKorisnike()
         {
             klijentBindingSource.DataSource = null;
@@ -34,19 +37,30 @@ namespace MobiFinance.Forme
             klijentBindingSource.DataSource = Klijent.DohvatiKorisnike();
         }
 
+        /// <summary>
+        /// Metoda za dohvaćanje svih aktivnih kredita odabranog klijenta
+        /// </summary>
+        /// <param name="k"></param>
         public void PrikaziKrediteOdabranogKorisnika(Klijent k) {
             kreditBindingSource.DataSource = null;
             ListaKreditaKorsinika = new BindingList<Kredit_>();
             ListaKreditaKorsinika = Kredit.DohvatiKrediteKorisnika(k);
             kreditBindingSource.DataSource = ListaKreditaKorsinika;
         }
+        /// <summary>
+        /// Metoda za događaj učitavanja forme-prikaz svih korisnika
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmKreditiKorisnika_Load(object sender, EventArgs e)
         {
             PrikaziKorisnike();
             
 
         }
-
+        /// <summary>
+        /// metoda za zatvaranje aktivne forme
+        /// </summary>
         public void ZatvoriFormu() {
             this.Close();
         }
@@ -56,7 +70,11 @@ namespace MobiFinance.Forme
             ZatvoriFormu();
             
         }
-
+        /// <summary>
+        /// Metoda za mijenjanje kredita za prikazanog klijenta
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvPrikazKorisnika_SelectionChanged(object sender, EventArgs e)
         {
             odabraniKlijent = klijentBindingSource.Current as Klijent;
@@ -70,6 +88,11 @@ namespace MobiFinance.Forme
             }
         }
 
+        /// <summary>
+        /// Otvaranje forme za generiranje uplatnice odabranog kredita
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void uiUplatnicazaKredit_Click(object sender, EventArgs e)
         {
             try {
