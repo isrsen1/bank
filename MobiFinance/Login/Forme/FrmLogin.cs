@@ -33,7 +33,7 @@ namespace Login.Forme
             {
                 Prijava = new Zaposlenik(1, "Jurica", "Orsulic", "jorsulic@mzaba.com", "Trg Palih boraca 44", "0911233218", "admin123", 1, "nozuledja123");
                 Zaposlenik.PrijavljeniKorisnik = Prijava;
-
+                this.Hide();
                 FrmMain forma = new FrmMain();
                 forma.ShowDialog();
                 this.Close();
