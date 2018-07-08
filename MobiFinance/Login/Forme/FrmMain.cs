@@ -54,12 +54,13 @@ namespace Login.Forme
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Are you sure you want to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Zaposlenik.PrijavljeniKorisnik = null;
+                this.Close();
                 FrmLogin login = new FrmLogin();
                 login.ShowDialog();
-                this.Close();
+              
             }
             else
             {
