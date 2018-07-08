@@ -105,5 +105,13 @@ namespace MobiFinance.Forme
                 MessageBox.Show("Došlo je do pogreške.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             }
+
+        private void FrmKreditiKorisnika_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F1)
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/r18061/wiki/Korisni%C4%8Dka-dokumentacija#23-kreiranje-uplatnice-za-otplatu-kredita");
+            }
+        }
     }
 }

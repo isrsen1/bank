@@ -187,6 +187,7 @@
             this.Name = "FrmMain";
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMain_KeyDown);
             this.Controls.SetChildIndex(this.btnZaposlenici, 0);
             this.Controls.SetChildIndex(this.btnOtvaranjeUsluga, 0);
             this.Controls.SetChildIndex(this.btnPregledKlijenata, 0);

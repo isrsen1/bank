@@ -78,5 +78,13 @@ namespace Login.Forme
 
 
         }
+
+        private void FrmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F1)
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/r18061/wiki/Korisni%C4%8Dka-dokumentacija#13-po%C4%8Detni-prikaz");
+            }
+        }
     }
 }

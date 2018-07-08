@@ -36,9 +36,6 @@
             this.cbPopisKredita = new System.Windows.Forms.ComboBox();
             this.kreditBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dgvOtplatnaTablica = new System.Windows.Forms.DataGridView();
-            this.otplatnatablicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnPrintanje = new System.Windows.Forms.Button();
-            this.btnVratiNazad = new System.Windows.Forms.Button();
             this.brojMjesecaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kamateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +45,9 @@
             this.otplaceniDioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kreditidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kreditDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otplatnatablicaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnPrintanje = new System.Windows.Forms.Button();
+            this.btnVratiNazad = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.kreditBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOtplatnaTablica)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.otplatnatablicaBindingSource)).BeginInit();
@@ -120,35 +120,6 @@
             this.dgvOtplatnaTablica.Size = new System.Drawing.Size(646, 214);
             this.dgvOtplatnaTablica.TabIndex = 1;
             // 
-            // otplatnatablicaBindingSource
-            // 
-            this.otplatnatablicaBindingSource.DataSource = typeof(Login.Otplatna_tablica);
-            // 
-            // btnPrintanje
-            // 
-            this.btnPrintanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintanje.ForeColor = System.Drawing.Color.Black;
-            this.btnPrintanje.Image = global::MobiFinance.Properties.Resources.printer1;
-            this.btnPrintanje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintanje.Location = new System.Drawing.Point(749, 272);
-            this.btnPrintanje.Name = "btnPrintanje";
-            this.btnPrintanje.Size = new System.Drawing.Size(163, 61);
-            this.btnPrintanje.TabIndex = 2;
-            this.btnPrintanje.Text = "Printanje";
-            this.btnPrintanje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnPrintanje.UseVisualStyleBackColor = true;
-            this.btnPrintanje.Click += new System.EventHandler(this.btnPrintanje_Click);
-            // 
-            // btnVratiNazad
-            // 
-            this.btnVratiNazad.Image = global::MobiFinance.Properties.Resources.back1;
-            this.btnVratiNazad.Location = new System.Drawing.Point(2, 89);
-            this.btnVratiNazad.Name = "btnVratiNazad";
-            this.btnVratiNazad.Size = new System.Drawing.Size(105, 28);
-            this.btnVratiNazad.TabIndex = 3;
-            this.btnVratiNazad.UseVisualStyleBackColor = true;
-            this.btnVratiNazad.Click += new System.EventHandler(this.btnVratiNazad_Click);
-            // 
             // brojMjesecaDataGridViewTextBoxColumn
             // 
             this.brojMjesecaDataGridViewTextBoxColumn.DataPropertyName = "BrojMjeseca";
@@ -206,6 +177,35 @@
             this.kreditDataGridViewTextBoxColumn.Name = "kreditDataGridViewTextBoxColumn";
             this.kreditDataGridViewTextBoxColumn.Visible = false;
             // 
+            // otplatnatablicaBindingSource
+            // 
+            this.otplatnatablicaBindingSource.DataSource = typeof(Login.Otplatna_tablica);
+            // 
+            // btnPrintanje
+            // 
+            this.btnPrintanje.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintanje.ForeColor = System.Drawing.Color.Black;
+            this.btnPrintanje.Image = global::MobiFinance.Properties.Resources.printer1;
+            this.btnPrintanje.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrintanje.Location = new System.Drawing.Point(749, 272);
+            this.btnPrintanje.Name = "btnPrintanje";
+            this.btnPrintanje.Size = new System.Drawing.Size(163, 61);
+            this.btnPrintanje.TabIndex = 2;
+            this.btnPrintanje.Text = "Printanje";
+            this.btnPrintanje.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPrintanje.UseVisualStyleBackColor = true;
+            this.btnPrintanje.Click += new System.EventHandler(this.btnPrintanje_Click);
+            // 
+            // btnVratiNazad
+            // 
+            this.btnVratiNazad.Image = global::MobiFinance.Properties.Resources.back1;
+            this.btnVratiNazad.Location = new System.Drawing.Point(2, 89);
+            this.btnVratiNazad.Name = "btnVratiNazad";
+            this.btnVratiNazad.Size = new System.Drawing.Size(105, 28);
+            this.btnVratiNazad.TabIndex = 3;
+            this.btnVratiNazad.UseVisualStyleBackColor = true;
+            this.btnVratiNazad.Click += new System.EventHandler(this.btnVratiNazad_Click);
+            // 
             // FrmOtplatnaTablica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,6 +218,7 @@
             this.Name = "FrmOtplatnaTablica";
             this.Text = "FrmOtplatnaTablica";
             this.Load += new System.EventHandler(this.FrmOtplatnaTablica_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmOtplatnaTablica_KeyDown);
             this.Controls.SetChildIndex(this.cbPopisKredita, 0);
             this.Controls.SetChildIndex(this.dgvOtplatnaTablica, 0);
             this.Controls.SetChildIndex(this.btnPrintanje, 0);

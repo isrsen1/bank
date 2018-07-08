@@ -182,5 +182,13 @@ namespace MobiFinance.Forme
             printDocument1.DocumentName = "Uplatnica";
             e.Graphics.DrawImage(Slika, 0, 0);
         }
+
+        private void FrmGotovaUplatnica_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.F1)
+            {
+                System.Diagnostics.Process.Start("https://github.com/foivz/r18061/wiki/Korisni%C4%8Dka-dokumentacija#24-ispis-generirane-uplatnice");
+            }
+        }
     }
 }

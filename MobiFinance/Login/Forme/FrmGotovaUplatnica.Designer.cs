@@ -622,10 +622,12 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmGotovaUplatnica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmGotovaUplatnica";
             this.Load += new System.EventHandler(this.FrmGotovaUplatnica_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGotovaUplatnica_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiGeneriraniBarcode)).EndInit();

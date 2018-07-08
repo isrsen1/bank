@@ -120,7 +120,9 @@
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorIme);
+            this.KeyPreview = true;
             this.Name = "FrmLogin";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogin_KeyDown);
             this.Controls.SetChildIndex(this.lblKorIme, 0);
             this.Controls.SetChildIndex(this.lblLozinka, 0);
             this.Controls.SetChildIndex(this.txtUser, 0);

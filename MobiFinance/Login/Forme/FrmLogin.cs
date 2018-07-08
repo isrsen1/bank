@@ -66,5 +66,13 @@ namespace Login.Forme
         {
             this.Close();
         }
+
+        private void FrmLogin_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyData == Keys.F1) {
+                System.Diagnostics.Process.Start("https://github.com/foivz/r18061/wiki/Korisni%C4%8Dka-dokumentacija#12-prijava");
+            }
+        }
     }
 }
